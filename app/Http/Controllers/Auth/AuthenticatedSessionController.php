@@ -29,8 +29,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
-    }
+        $notification = array(
+            'message' => 'Logged In Successfully',
+            'alert-type' => 'info'
+        );
+
+    return redirect()->intended(RouteServiceProvider::HOME)->with($notification);
+    } 
 
     /**
      * Destroy an authenticated session.
