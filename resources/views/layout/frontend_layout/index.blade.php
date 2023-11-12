@@ -1,40 +1,41 @@
 @extends('layout.frontend_layout.master')
-@section('page_title', 'Home Page - The Ministry of Sanitation & Water Resources')
+@section('page_title', 'Home - The Ministry of Sanitation & Water Resources')
 
 @section('content')
 
  <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+
+
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{asset('frontend/assets/img/1.jpg ') }}" alt="Image">
+    @foreach($sliders as $key => $slider)
+                <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                    <img class="w-100" src="{{asset($slider->image) }}" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Make Your Home Like Garden</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{{asset('frontend/assets/img/2.jpg ') }}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Create Your Own Small Garden At Home</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    <h2 class="display-2 text-white mb-5 animated slideInLeft">{!! $slider->title !!}</h2>
 
-    
+                                    @if ($slider->subtitle)
+                                    <h3 class="display-5 text-white mb-5 animated slideInRight">{!! $slider->subtitle !!}</h3>
+                                    @endif
+
+                                    @if ($slider->description)
+                                    <h4 class="display-8 text-white mb-5 animated slideInDown">{!! $slider->description !!}</h4>
+                                    @endif
+
+                                    @if ($slider->button_link)
+                                    <a href="{{asset($slider->button_link) }}" class="btn btn-primary py-sm-6 px-sm-8">Read More</a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    @endforeach
 
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="prev">
@@ -50,3 +51,4 @@
     </div>
 
 @endsection
+

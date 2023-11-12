@@ -17,11 +17,11 @@ class SliderFactory extends Factory
     public function definition(): array
     {
         return [
-            'image' => '/upload/test',
-            'title' => fake()->sentence(),
-            'subtitle' => fake()->sentence(6),
-            'description' => fake()->paragraph(2),
-            'button_link' => fake()->url(),
+        //     'image' => '/upload/slider_image',
+        //     'title' => fake()->sentence(),
+        //     'subtitle' => fake()->sentence(6),
+        //     'description' => fake()->paragraph(2),
+        //     'button_link' => fake()->url(),
         ];
     }
 }

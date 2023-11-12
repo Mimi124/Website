@@ -3,10 +3,9 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Log In | R&H-Hospital</title>
+        <title>Log In | The Ministry of Sanitation and Water Resource</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico')}}">
@@ -31,22 +30,22 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                                
+
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
                                         <a href="" class="logo logo-dark text-center">
                                             <span class="logo-lg">
-                                                <img src="{{ asset('backend/assets/images/r&h.png')}}" alt="" height="100px">
+                                                <img src="{{ asset('backend/assets/images/min.jpg')}}" alt="" height="120px">
                                             </span>
                                         </a>
-                    
+
                                         <a href="" class="logo logo-light text-center">
                                             <span class="logo-lg">
-                                                <img src="{{ asset('backend/assets/images/logo-no.png')}}" alt="" height="22">
+                                                <img src="{{ asset('backend/assets/images/about-1.jpg')}}" alt="" height="22">
                                             </span>
                                         </a>
                                     </div>
-                                  
+
                                 </div>
 <br>
 
@@ -55,8 +54,8 @@
 
     <div class="mb-3">
         <label for="login" class="form-label">Username</label>
-        <input class="form-control @error('username') is-invalid @enderror" 
-        type="text" name="username" 
+        <input class="form-control @error('username') is-invalid @enderror"
+        type="text" name="username"
         id="username" required="" placeholder="Enter your Username">
         @error('username')
         <span class="text-danger">{{$message}}
@@ -67,7 +66,7 @@
         <label for="password" class="form-label">Password</label>
         <div class="input-group input-group-merge">
             <input type="password" id="password" name="password"
-             class="form-control @error('password') is-invalid @enderror" 
+             class="form-control @error('password') is-invalid @enderror"
              placeholder="Enter your password">
         @error('password')
         <span class="text-danger">{{$message}}
@@ -101,7 +100,7 @@
                         </div>
                         <!-- end card -->
 
-                   
+
                         <!-- end row -->
 
                     </div> <!-- end col -->
@@ -114,7 +113,7 @@
 
 
         <footer class="footer footer-alt">
-             <script>document.write(new Date().getFullYear())</script> &copy;  <a href="" class="text-white-50">The Ministry of Sanitation and Water Resource</a> 
+             <script>document.write(new Date().getFullYear())</script> &copy;  <a href="" class="text-white-50">The Ministry of Sanitation and Water Resource</a>
         </footer>
 
         <!-- Vendor js -->
@@ -122,6 +121,6 @@
 
         <!-- App js -->
         <script src="{{ asset('backend/assets/js/app.min.js')}}"></script>
-        
+
     </body>
 </html>

@@ -1,8 +1,7 @@
 <meta charset="utf-8" />
 <title> @yield('page_title')</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-<meta content="Coderthemes" name="author" />
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!-- App favicon -->
 <link rel="shortcut icon" href="{{asset('backend/assets/images/logo-color.png') }}">
@@ -11,26 +10,35 @@
 <link href="{{asset('backend/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- App css -->
 <link href="{{asset('backend/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style"/>
+
+<link rel="stylesheet" href="{{asset('backend/assets/css/bootstrap-iconpicker.css')}}" >
 <!-- icons -->
+
+<link rel="stylesheet" href="{{asset('backend/assets/css/bootstrap-iconpicker.css')}}" >
 <link href="{{asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
 
-
+<!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"/>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+<!-- Bootstrap-Iconpicker -->
+<link rel="stylesheet" href="dist/css/bootstrap-iconpicker.min.css"/>
 
    <!-- yajra dataTables -->
 
 
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
 
-   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" /> 
-   
 
 <!-- dataTables end -->
 
- 
+
 
 
 <!-- toastr -->
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
 <!-- toastr -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -39,4 +47,4 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Head js -->
 <script src="{{asset('backend/assets/js/head.js') }}"></script>
-    
+

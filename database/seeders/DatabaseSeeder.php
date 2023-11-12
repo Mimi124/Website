@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
 
         // User::factory()->count(1)->create();
 
-         \App\Models\Slider::factory(3)->create();
+        //  \App\Models\Slider::factory(3)->create();
+
+        \App\Models\Features::factory(3)->create();
     }
 }

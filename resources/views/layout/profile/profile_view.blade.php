@@ -4,7 +4,7 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
- 
+
 
 <div class="content">
 
@@ -25,7 +25,7 @@
                     <h4 class="page-title">Profile</h4>
                 </div>
             </div>
-        </div>     
+        </div>
         <!-- end page title -->
 
 <div class="row">
@@ -55,7 +55,7 @@
 
     <p class="text-muted mb-2 font-13"><strong>Gender :</strong> <span class="ms-2">{{ $adminData->gender }}</span></p>
 
-</div>                                    
+</div>
 
 <ul class="social-list list-inline mt-3 mb-0">
     <li class="list-inline-item">
@@ -70,8 +70,8 @@
     <li class="list-inline-item">
         <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github"></i></a>
     </li>
-</ul>   
-</div>                                 
+</ul>
+</div>
 </div> <!-- end card -->
 
 
@@ -121,7 +121,7 @@
         </div>
     </div> <!-- end col -->
     </div>
-    
+
     <div class="col-md-12 mb-3">
         <label for="gender" class="form-label">Gender</label>
         <select name='gender' id="gender" class="form-select" required>
@@ -129,7 +129,7 @@
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
             <option value='Unknown'>Unknown</option>
-    
+
         </select>
     </div>
 

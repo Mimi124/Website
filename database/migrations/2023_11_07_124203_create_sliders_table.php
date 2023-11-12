@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('subtitle')->nullable();
             $table->string('description')->nullable();
             $table->string('button_link')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

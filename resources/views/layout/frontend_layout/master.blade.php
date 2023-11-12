@@ -29,62 +29,26 @@
 
 
     <!-- Top Feature Start -->
-    <div class="container-fluid top-feature py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-times text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h3>Let's clean Ghana</h3>
-                                <h4>Sesa wo suban</h4>
-                                <span>(Change your habit)</span>
-                                <h5>Play Your Part</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone-alt text-success fa-2x"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Whatsapp Line for Reporting Dumping of Waste Illegally</h4>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone text-success"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>24/7 Available</h4>
-                                <p></p>
-                                 <h5>020-246-4444</h5>
-                                <h5>020-246-4411</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
-            </div>
-        </div>
-    </div>
+    @include('layout.frontend_layout.Contents.feature')
     <!-- Top Feature End -->
 
 
+        <!-- About Start -->
+        @include('layout.frontend_layout.Contents.goal')
+        <!-- About End -->
+
+
+     <!-- Team Start -->
+     @include('layout.frontend_layout.Contents.team')
+    <!-- Team End -->
+
+  <!-- Facts Start -->
+  @include('layout.frontend_layout.Contents.facts')
+<!-- Facts End -->
 
 
     <!-- Footer Start -->
-   
+
     @include('layout.frontend_layout.body.footer')
     <!-- Footer End -->
 
@@ -108,7 +72,7 @@
     <script src="{{asset('frontend/assets/lib/lightbox/js/lightbox.min.js ') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{asset('frontend/assets/js/main.js ') }}"></script>
+    <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 </body>
 
 </html>

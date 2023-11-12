@@ -5,8 +5,7 @@
         <meta charset="utf-8" />
         <title>Logout | Ministry Of Sanitation and Water</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('backend/assets/images/favicon.ico ') }}">
@@ -33,7 +32,7 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                                
+
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
                                         <a href="index.html" class="logo logo-dark text-center">
@@ -41,7 +40,7 @@
                                                 <img src="{{asset('backend/assets/images/logo-dark.png')}}" alt="" height="22">
                                             </span>
                                         </a>
-                    
+
                                         <a href="index.html" class="logo logo-light text-center">
                                             <span class="logo-lg">
                                                 <img src="{{asset('backend/assets/images/logo-light.png')}}" alt="" height="22">
@@ -86,7 +85,7 @@
 
 
         <footer class="footer footer-alt">
-             <script>document.write(new Date().getFullYear())</script> &copy;POS <a href="" class="text-white-50">MIMS</a> 
+             <script>document.write(new Date().getFullYear())</script> &copy;POS <a href="" class="text-white-50">MIMS</a>
         </footer>
 
         <!-- Vendor js -->
@@ -114,10 +113,10 @@
 
     case 'error':
     toastr.error(" {{ Session::get('message') }} ");
-    break; 
+    break;
  }
- @endif 
+ @endif
 </script>
-        
+
     </body>
 </html>

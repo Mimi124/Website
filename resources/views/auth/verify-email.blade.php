@@ -3,10 +3,9 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Confirm Email | Ministry Of Sanitation and Water</title>
+        <title>Confirm Email |The Ministry Of Sanitation and Water</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico')}}">
@@ -31,7 +30,7 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                                
+
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
                                         <a href="" class="logo logo-dark text-center">
@@ -39,14 +38,14 @@
                                                 <img src="{{ asset('backend/assets/images/r&h.png')}}" alt="" height="100px">
                                             </span>
                                         </a>
-                    
+
                                         <a href="" class="logo logo-light text-center">
                                             <span class="logo-lg">
                                                 <img src="{{ asset('backend/assets/images/logo-no.png')}}" alt="" height="22">
                                             </span>
                                         </a>
                                     </div>
-                                  
+
                                 </div>
 <br>
 
@@ -94,23 +93,23 @@ $data= App\Models\User::Auth()->id()->get();
                                     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
                                         {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
                                     </div>
-                                
+
                                     @if (session('status') == 'verification-link-sent')
                                         <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
                                             {{ __('A new verification link has been sent to the email address you provided during registration.') }}
                                         </div>
                                     @endif
-                                
+
                                     <div class="mt-4 flex items-center justify-between">
                                         <form method="POST" action="{{ route('verification.send') }}">
                                             @csrf
-                                
+
                                             <button class="uk-button uk-button-default" type="submit">
                                                 {{ __('Resend Verification Email') }}
                                               </button>
                                         </form>
-                                
-                                        
+
+
                                     </div>
 
 
@@ -118,7 +117,7 @@ $data= App\Models\User::Auth()->id()->get();
                         </div>
                         <!-- end card -->
 
-                   
+
                         <!-- end row -->
 
                     </div> <!-- end col -->
@@ -131,7 +130,7 @@ $data= App\Models\User::Auth()->id()->get();
 
 
         <footer class="footer footer-alt">
-             <script>document.write(new Date().getFullYear())</script> &copy; POS <a href="" class="text-white-50">Mims</a> 
+             <script>document.write(new Date().getFullYear())</script> &copy; POS <a href="" class="text-white-50">Mims</a>
         </footer>
 
         <!-- Vendor js -->
@@ -139,6 +138,6 @@ $data= App\Models\User::Auth()->id()->get();
 
         <!-- App js -->
         <script src="{{ asset('backend/assets/js/app.min.js')}}"></script>
-        
+
     </body>
 </html>

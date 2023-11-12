@@ -27,6 +27,7 @@ class SliderCreateRequest extends FormRequest
             'subtitle'=> ['nullable','string','max:255'],
             'description'=> ['nullable','string','max:255'],
             'button_link'=> ['nullable'],
+            'status' => ['boolean']
         ];
     }
 }

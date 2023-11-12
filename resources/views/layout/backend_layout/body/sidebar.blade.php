@@ -14,7 +14,7 @@ $route = Route::current()->getName();
 
     <div class="h-100" data-simplebar>
 
-       
+
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
@@ -22,7 +22,7 @@ $route = Route::current()->getName();
             <ul id="side-menu">
 
                 <li class="menu-title">Navigation</li>
-    
+
                 <li>
                     <a href="{{ url('/dashboard') }}">
                        <i class="mdi mdi-view-dashboard-outline"></i>
@@ -30,7 +30,7 @@ $route = Route::current()->getName();
                     </a>
                 </li>
 
-                <li class="menu-title mt-2" >Apps</li> 
+                <li class="menu-title mt-2" >Menu</li>
                 {{-- {{ ($prefix == '/users')?'active': ''}} --}}
 
 
@@ -46,9 +46,9 @@ $route = Route::current()->getName();
                                  <a href="{{route('slider.view')}}">
                                     <i class="icon-people">   View Slider </i>
                                  </a>
-                                
+
                             </li>
-                             
+
                         </ul>
                     </div>
                 </li>
@@ -57,17 +57,17 @@ $route = Route::current()->getName();
                 <li>
                     <a href="#sidebarUsers" data-bs-toggle="collapse">
                         <i class="mdi mdi-account-multiple-outline"></i>
-                        <span> Employees </span>
+                        <span> Features </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarUsers">
                         <ul class="nav-second-level">
                             <li>
-                                 <a href="">
-                                    <i class="icon-people">   View Employee</i> </a>
+                                 <a href="{{route('feature.view')}}">
+                                    <i class="icon-people">View Features</i> </a>
                                 </a>
                             </li>
-                             
+
                         </ul>
                     </div>
                 </li>
@@ -75,33 +75,33 @@ $route = Route::current()->getName();
                 <li>
                     <a href="#sidebarCrm" data-bs-toggle="collapse">
                         <i class="fe-truck"></i>
-                        <span>Suppliers</span>
+                        <span>Our Goal</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarCrm">
                         <ul class="nav-second-level">
                             <li>
-                                 <a href="">View Suppliers</a> 
+                                 <a href="{{ route('goal.view') }}">View Goals</a>
                             </li>
                         </ul>
                     </div>
                 </li>
 
-          
+
 
 
 
                 <li>
                     <a href="#sidebarEmail" data-bs-toggle="collapse">
                         <i class="mdi mdi-account-child-outline"></i>
-                        <span> Patients </span>
+                        <span> Our Team </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarEmail">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="">
-                                    <i class="mdi mdi-account-group">   View Patients</i> </a>
+                                <a href="{{ route('team.view') }}">
+                                    <i class="mdi mdi-account-group">   View Members</i> </a>
                                 </a>
                             </li>
                         </ul>
@@ -109,19 +109,22 @@ $route = Route::current()->getName();
                 </li>
 
                 <li>
-                    <a href="apps-social-feed.html">
-                        <span class="badge bg-pink float-end">Hot</span>
-                        <i class="mdi mdi-rss"></i>
-                        <span> Social Feed </span>
+                    <a href="#sidebarFacts" data-bs-toggle="collapse">
+                        <i class="mdi mdi-account-child-outline"></i>
+                        <span> Facts </span>
+                        <span class="menu-arrow"></span>
                     </a>
+                    <div class="collapse" id="sidebarFacts">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('fact.view') }}">
+                                    <i class="mdi mdi-account-group">   View Facts</i> </a>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
-                <li>
-                    <a href="apps-companies.html">
-                        <i class="mdi mdi-domain"></i>
-                        <span> Companies </span>
-                    </a>
-                </li>
 
                 <li>
                     <a href="#sidebarProjects" data-bs-toggle="collapse">
@@ -201,7 +204,7 @@ $route = Route::current()->getName();
                     </div>
                 </li>
 
-            
+
 
                 <li class="menu-title mt-2">Custom</li>
 
@@ -216,27 +219,27 @@ $route = Route::current()->getName();
                             <li>
                                 <a href="auth-login.html">Log In</a>
                             </li>
-                          
+
                             <li>
                                 <a href="auth-register.html">Register</a>
                             </li>
-                           
+
                             <li>
                                 <a href="auth-signin-signup.html">Signin - Signup</a>
                             </li>
-                           
+
                             <li>
                                 <a href="auth-recoverpw.html">Recover Password</a>
                             </li>
-                           
+
                             <li>
                                 <a href="auth-lock-screen.html">Lock Screen</a>
                             </li>
-                          
+
                             <li>
                                 <a href="auth-logout.html">Logout</a>
                             </li>
-                         
+
                         </ul>
                     </div>
                 </li>
@@ -248,7 +251,7 @@ $route = Route::current()->getName();
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarExpages">
-                        <ul class="nav-second-level">             
+                        <ul class="nav-second-level">
                             <li>
                                 <a href="pages-404.html">Error 404</a>
                             </li>
@@ -264,9 +267,9 @@ $route = Route::current()->getName();
                 </li>
 
 
-    
 
-      
+
+
             </ul>
 
         </div>
