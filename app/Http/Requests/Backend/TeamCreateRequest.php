@@ -23,8 +23,6 @@ class TeamCreateRequest extends FormRequest
     {
         return [
             'image' => ['required','image',],
-            'title'=> ['required','string'],
-            'subtitle'=> ['required','string'],
             'name'=> ['required','string'],
             'position'=> ['required','string'],
             'facebook_link'=> ['nullable'],

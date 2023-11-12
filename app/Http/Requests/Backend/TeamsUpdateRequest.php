@@ -22,9 +22,7 @@ class TeamsUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => ['nullable','image',],
-            'title'=> ['nullable','string'],
-            'subtitle'=> ['nullable','string'],
+            'image' => ['nullable','image'],
             'position'=> ['nullable','string'],
             'facebook_link'=> ['nullable'],
             'twitter_link'=> ['nullable'],

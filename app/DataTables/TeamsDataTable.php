@@ -83,8 +83,6 @@ class TeamsDataTable extends DataTable
         return [
             Column::make('id')->width(10),
             Column::make('image')->width(50),
-            Column::make('title'),
-            Column::make('subtitle'),
             Column::make('name'),
             Column::make('position'),
             Column::make('facebook_link'),

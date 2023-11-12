@@ -43,8 +43,6 @@ class TeamsController extends Controller
         $imagePath = $this->uploadImage($request, 'image');
         $team = new Teams();
         $team->image = $imagePath;
-        $team->title = $request->title;
-        $team->subtitle = $request->subtitle;
         $team->name = $request->name;
         $team->position = $request->position;
         $team->facebook_link = $request->facebook_link;
@@ -90,8 +88,6 @@ class TeamsController extends Controller
             $imagePath = $this->uploadImage($request, 'image', $team->image);
 
             $team->image = !empty($imagePath) ? $imagePath : $team->image;
-            $team->title = $request->title;
-            $team->subtitle = $request->subtitle;
             $team->name = $request->name;
             $team->position = $request->position;
             $team->facebook_link = $request->facebook_link;
