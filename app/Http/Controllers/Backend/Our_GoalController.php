@@ -21,14 +21,13 @@ class Our_GoalController extends Controller
     public function index(Our_GoalDataTable $dataTable)
     {
         return $dataTable->render("layout.backend_layout.Menu.Goals.index");
-
     }
     /**
      * Show the form for creating a new resource.
      */
     public function create(): View
     {
-        //
+        
         return view('layout.backend_layout.Menu.Goals.create');
     }
 
