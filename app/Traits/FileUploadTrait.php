@@ -10,7 +10,7 @@ use phpDocumentor\Reflection\Types\Void_;
 trait FileUploadTrait
 {
 
-    function uploadImage(Request $request, $inputName, $oldPath = NULL, $path = "/Upload/slider_images") {
+    function uploadImage(Request $request, $inputName, $oldPath = NULL, $path = "/Upload/home_images") {
 
         if ($request->hasFile($inputName)) {
 
