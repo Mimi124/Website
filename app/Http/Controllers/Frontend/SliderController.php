@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Facts;
 use App\Models\Features;
+use App\Models\SectionTitle;
 use App\Models\OurGoal;
 use App\Models\Slider;
 use App\Models\Teams;
