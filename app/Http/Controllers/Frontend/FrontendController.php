@@ -5,15 +5,15 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Facts;
 use App\Models\Features;
-use App\Models\SectionTitle;
 use App\Models\OurGoal;
+use App\Models\SectionTitle;
 use App\Models\Slider;
 use App\Models\Teams;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
-class SliderController extends Controller
+class FrontendController extends Controller
 {
     function index() : View {
         $sectionTitles = $this->getSectionTitles();

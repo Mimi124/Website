@@ -6,7 +6,7 @@ use App\Http\Controllers\Backend\FeatureController;
 use App\Http\Controllers\Backend\OurGoalController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\TeamsController;
-use App\Http\Controllers\Frontend\SliderController as FrontendSliderController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Models\OurGoal;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [FrontendSliderController::class, 'index'])->name('home');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('layout.backend_layout.index');
