@@ -84,6 +84,8 @@ Route::controller(OurGoalController::class)->prefix('goal')->name('goal.')->grou
 
 });
 
+Route::put('team-title-update', [TeamsController::class, 'updateTitle'])->name('title.update');
+
 Route::controller(TeamsController::class)->prefix('teams')->name('team.')->group(function () {
     Route::get('/create', 'Create')->name('create');
     Route::get('/view', 'Index')->name('view');
@@ -91,6 +93,7 @@ Route::controller(TeamsController::class)->prefix('teams')->name('team.')->group
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
+
 
 });
 

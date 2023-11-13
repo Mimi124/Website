@@ -6,6 +6,7 @@ use App\DataTables\TeamsDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\TeamCreateRequest;
 use App\Http\Requests\Backend\TeamsUpdateRequest;
+use App\Models\SectionTitle;
 use App\Models\Teams;
 use App\Traits\FileUploadTrait;
 use Illuminate\Contracts\View\View;
@@ -19,7 +20,10 @@ class TeamsController extends Controller
      */
     public function index(TeamsDataTable $dataTable)
     {
-        return $dataTable->render("layout.backend_layout.Menu.Team.index");
+        $keys =[ 'team_title','team_subtitle'];
+        $titles = SectionTitle::Wherein('key', $keys)->pluck('value','key');
+        // dd($titles['team_title']);
+        return $dataTable->render("layout.backend_layout.Menu.Team.index", compact('titles'));
 
     }
 
@@ -104,6 +108,38 @@ class TeamsController extends Controller
             return redirect()->route('team.view')->with($notification);
     }
 
+
+//title update
+    public function updateTitle(Request $request){
+        // dd($request->all());
+        $request ->validate([
+            'team_title' => ['required','max:100'],
+            'team_subtitle' => ['required','max:255']
+
+        ]);
+
+        SectionTitle::updateOrCreate(
+            ['key' => 'team_title'],
+            ['value' => $request->team_title]
+        );
+
+        SectionTitle::updateOrCreate(
+            ['key' => 'team_subtitle'],
+            ['value' => $request->team_subtitle]
+        );
+
+
+        $notification = array(
+            'message' => 'Team Title Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+
+
+    }
+
     /**
      * Remove the specified resource from storage.
      */
@@ -114,7 +150,7 @@ class TeamsController extends Controller
         $team->delete();
 
         $notification = array(
-            'message' => 'Slider Deleted Successfully',
+            'message' => 'Member Deleted Successfully',
             'alert-type' => 'success'
         );
 

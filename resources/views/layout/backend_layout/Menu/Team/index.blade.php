@@ -12,31 +12,43 @@
 
         <section class="section">
             <div class="section-header">
-                <h3>Header</h3>
+                <h3>Team Members</h3>
             </div>
 
             <div class="card">
                 <div class="card-body">
                     <div id="accordion">
                         <div class="accordion">
-                            <div class="accordion-header collapsed bg-secondary text-white p-1 " role="button"
+                            <div class="accordion-header collapsed bg-secondary text-light p-1 " role="button"
                                 data-toggle="collapse" data-target="#panel-body-1" aria-expanded="false">
                                 <h4>Title for team members</h4>
                             </div>
                             <div class="accordion-body collapse" id="panel-body-1" data-parent="#accordion" style="">
-                                <form action="" method="POST">
+                                <form action="{{ route('title.update') }}" method="POST">
                                     @csrf
                                     @method('PUT')
-                                    <div class="form-group">
-                                        <label for="">Top Title</label>
-                                        <input type="text" class="form-control" name="why_choose_top_title" value="">
+                            <div class="col-md-8">
+                                    <div class="mb-3">
+
+                                        <label for="title" class="form-label">Top Title</label>
+                                        <input type="text" class="form-control" name="team_title"
+                                         value="{{ @$titles['team_title'] }}">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">SubTitle</label>
-                                        <input type="text" class="form-control" name="why_choose_main_title" value="">
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                        <label for="subtitle" class="form-label">SubTitle</label>
+                                        <input type="text" class="form-control" name="team_subtitle"
+                                         value="{{ @$titles['team_subtitle'] }}">
                                     </div>
-                                    <br>
-                                    <button type="submit" class="btn btn-success">Save</button>
+                            </div>
+
+
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light mt-2"><i class="mdi mdi-content-save"></i> Save</button>
+                             </div>
+
                                 </form>
                             </div>
                         </div>
