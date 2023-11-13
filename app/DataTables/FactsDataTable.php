@@ -28,20 +28,12 @@ class FactsDataTable extends DataTable
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
             $delete = '<a href="'.route('fact.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
-
             return $edit . $delete;
 
         })->addColumn('image', function($query){
             return '<img width="100px" src="'.asset($query->image).'">';
-
-        })->addColumn('status', function($query){
-            if($query->status === 1){
-                return '<span class="btn btn-success waves-effect waves-light">Active</span>';
-            }else {
-                return '<span class="btn btn-warning waves-effect waves-light">InActive</span>';
-            }
         })
-        ->rawColumns(['image', 'action', 'status'])
+        ->rawColumns(['image', 'action'])
         ->setRowId('id');
 
     }
@@ -88,11 +80,10 @@ class FactsDataTable extends DataTable
             Column::make('subtitle'),
             Column::make('project_counter'),
             Column::make('staff_counter'),
-            Column::make('status'),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(150)
                   ->addClass('text-center'),
 
         ];

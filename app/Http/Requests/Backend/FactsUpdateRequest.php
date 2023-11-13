@@ -11,7 +11,7 @@ class FactsUpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class FactsUpdateRequest extends FormRequest
     {
         return [
             //
+            'image' => ['nullable','image','max:3000'],
+            'title'=> ['nullable','string','max:255'],
+            'subtitle'=> ['nullable','string','max:255'],
+            'project_counter'=> ['nullable','string','max:255'],
         ];
     }
 }

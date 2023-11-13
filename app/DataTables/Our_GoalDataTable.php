@@ -25,7 +25,7 @@ class Our_GoalDataTable extends DataTable
         ->addColumn('action', function ($query) {
             $edit = '<a href="'.route('goal.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('goal.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mt-2" id="delete" title="Delete">
+            $delete = '<a href="'.route('goal.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
 
             return $edit . $delete;
@@ -80,8 +80,8 @@ class Our_GoalDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id'),
-            Column::make('image'),
+            Column::make('id')->width(60),
+            Column::make('image')->width(150),
             Column::make('title'),
             Column::make('subtitle'),
             Column::make('description')->width(200),
@@ -94,7 +94,7 @@ class Our_GoalDataTable extends DataTable
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(150)
                   ->addClass('text-center'),
 
         ];

@@ -26,8 +26,9 @@ class TeamsDataTable extends DataTable
         ->addColumn('action', function ($query) {
             $edit = '<a href="'.route('team.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('team.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mt-1" id="delete" title="Delete">
+            $delete = '<a href="'.route('team.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
+
 
             return $edit . $delete;
 
@@ -92,7 +93,7 @@ class TeamsDataTable extends DataTable
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(150)
                   ->addClass('text-center'),
         ];
     }

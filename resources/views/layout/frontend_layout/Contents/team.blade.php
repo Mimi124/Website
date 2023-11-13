@@ -1,16 +1,11 @@
 <div class="container-xxl py-5">
     <div class="container">
 
-
-
-        
-
-
-
-
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-             {{-- <h2 class="text-success">{!! $item->title !!}</h2>
-            <h5 class="display-7 mb-5">{!! $item->subtitle !!}</</h5> --}}
+
+            <h2 class="text-success">{!! @$sectionTitles['team_title'] !!}</h2>
+            <h5 class="display-7 mb-5">{!!  @$sectionTitles['team_subtitle'] !!}</h5>
+            
         </div>
         <div class="row g-4">
             @foreach ( $teams as $item)
