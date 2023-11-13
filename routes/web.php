@@ -3,12 +3,12 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Backend\FactsController;
 use App\Http\Controllers\Backend\FeatureController;
-use App\Http\Controllers\Backend\Our_GoalController;
+use App\Http\Controllers\Backend\OurGoalController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\TeamsController;
 use App\Http\Controllers\Frontend\SliderController as FrontendSliderController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Our_Goal;
+use App\Models\OurGoal;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,7 +74,7 @@ Route::controller(FeatureController::class)->prefix('feature')->name('feature.')
 
 });
 
-Route::controller(Our_GoalController::class)->prefix('goal')->name('goal.')->group(function () {
+Route::controller(OurGoalController::class)->prefix('goal')->name('goal.')->group(function () {
     Route::get('/create', 'Create')->name('create');
     Route::get('/view', 'Index')->name('view');
     Route::get('/edit/{id}','Edit')->name('edit');

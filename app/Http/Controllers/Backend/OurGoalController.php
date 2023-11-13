@@ -6,13 +6,13 @@ use App\DataTables\Our_GoalDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Our_GoalCreateRequest;
 use App\Http\Requests\Backend\Our_GoalUpdateRequest;
-use App\Models\Our_Goal;
+use App\Models\OurGoal;
 use App\Traits\FileUploadTrait;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class Our_GoalController extends Controller
+class OurGoalController extends Controller
 {
     use FileUploadTrait;
     /**
@@ -42,7 +42,7 @@ class Our_GoalController extends Controller
         //  dd($request->all());
 
         $imagePath = $this->uploadImage($request, 'image');
-        $goal = new Our_Goal();
+        $goal = new OurGoal();
         $goal->image = $imagePath;
         $goal->title = $request->title;
         $goal->subtitle = $request->subtitle;
@@ -77,7 +77,7 @@ class Our_GoalController extends Controller
      */
     public function edit(string $id)
     {
-        $goal = Our_Goal::findOrFail($id);
+        $goal = OurGoal::findOrFail($id);
         return view('layout.backend_layout.Menu.Goals.edit',compact('goal'));
     }
 
@@ -86,7 +86,7 @@ class Our_GoalController extends Controller
      */
     public function update(Our_GoalUpdateRequest $request, string $id)
     {
-        $goal = Our_Goal::findOrFail($id);
+        $goal = OurGoal::findOrFail($id);
         $imagePath = $this->uploadImage($request, 'image', $goal->image);
 
         $goal->image = !empty($imagePath) ? $imagePath : $goal->image;
@@ -114,7 +114,7 @@ class Our_GoalController extends Controller
      */
     public function destroy(string $id)
     {
-        $goal = Our_Goal::findOrFail($id);
+        $goal = OurGoal::findOrFail($id);
         $this->removeImage($goal->image);
         $goal->delete();
 
