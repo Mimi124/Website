@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Our_Goal;
+use App\Models\OurGoal;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -47,7 +47,7 @@ class Our_GoalDataTable extends DataTable
     /**
      * Get the query source of dataTable.
      */
-    public function query(Our_Goal $model): QueryBuilder
+    public function query(OurGoal $model): QueryBuilder
     {
         return $model->newQuery();
     }
