@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('our__goals', function (Blueprint $table) {
+        Schema::create('our_goals', function (Blueprint $table) {
             $table->id();
             $table->text('image');
             $table->string('title')->required();
