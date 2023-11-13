@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\DataTables\Our_GoalDataTable;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Backend\Our_GoalCreateRequest;
-use App\Http\Requests\Backend\Our_GoalUpdateRequest;
+use App\Http\Requests\Backend\OurGoalCreateRequest;
+use App\Http\Requests\Backend\OurGoalUpdateRequest;
 use App\Models\OurGoal;
 use App\Traits\FileUploadTrait;
 use Illuminate\Contracts\View\View;
@@ -27,14 +27,14 @@ class OurGoalController extends Controller
      */
     public function create(): View
     {
-        
+
         return view('layout.backend_layout.Menu.Goals.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Our_GoalCreateRequest $request): RedirectResponse
+    public function store(OurGoalCreateRequest $request): RedirectResponse
     {
 
 
@@ -83,7 +83,7 @@ class OurGoalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Our_GoalUpdateRequest $request, string $id)
+    public function update(OurGoalUpdateRequest $request, string $id)
     {
         $goal = OurGoal::findOrFail($id);
         $imagePath = $this->uploadImage($request, 'image', $goal->image);

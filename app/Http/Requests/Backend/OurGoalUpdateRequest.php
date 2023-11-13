@@ -4,7 +4,7 @@ namespace App\Http\Requests\Backend;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Our_GoalUpdateRequest extends FormRequest
+class OurGoalUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
