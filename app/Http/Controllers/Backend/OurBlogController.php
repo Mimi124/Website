@@ -48,7 +48,7 @@ class OurBlogController extends Controller
         $ourblog = new OurBlog();
         $ourblog->image = $imagePath;
         $ourblog->topic = $request->topic;
-        $ourblog->date = $request->date;
+        $ourblog->date = date('MMM Do YYYY',strtotime($request->date));
         $ourblog->button_link = $request->button_link;
         $ourblog->save();
 

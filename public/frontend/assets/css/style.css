@@ -301,14 +301,14 @@ h6,
 
   /* line 34, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
   .home-blog-area .home-blog-single .blog-img-cap .blog-cap p {
-    color: #707b8e;
+    color: #0c1627;
   }
 
   /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
   .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
     color: #191d34;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 100;
     line-height: 1.4;
     display: block;
     text-transform: capitalize;

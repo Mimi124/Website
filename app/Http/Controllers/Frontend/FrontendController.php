@@ -26,7 +26,7 @@ class FrontendController extends Controller
         $goals = OurGoal::where('status', 1)->get();
         $teams = Teams::where('status', 1)->get();
         $facts = Facts::get();
-        $blogs = OurBlog::take(2)->get();;
+        $blogs = OurBlog::take(2)->get();
 
         return view("layout.frontend_layout.index",
         compact(
@@ -52,4 +52,13 @@ class FrontendController extends Controller
 
         return SectionTitle::whereIn('key', $keys)->pluck('value','key');
     }
+
+
+    function about() : View {
+
+        return view('frontend_pages.About.about');
+
+    }
+
+
 }

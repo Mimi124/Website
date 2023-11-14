@@ -23,34 +23,7 @@
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-        @yield('content')
-    <!-- Carousel End -->
-
-
-    <!-- Top Feature Start -->
-    @include('layout.frontend_layout.Contents.feature')
-    <!-- Top Feature End -->
-
-
-        <!-- About Start -->
-        @include('layout.frontend_layout.Contents.goal')
-        <!-- About End -->
-
-
-     <!-- Team Start -->
-     @include('layout.frontend_layout.Contents.team')
-    <!-- Team End -->
-
-  <!-- Facts Start -->
-  @include('layout.frontend_layout.Contents.facts')
-<!-- Facts End -->
-
-
-   <!-- Blog Start -->
-   @include('layout.frontend_layout.Contents.blog')
-<!-- Blog End -->
-
+ @yield('content')
 
     <!-- Footer Start -->
 
