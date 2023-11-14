@@ -150,20 +150,15 @@ $route = Route::current()->getName();
                 <li>
                     <a href="#sidebarTasks" data-bs-toggle="collapse">
                         <i class="mdi mdi-clipboard-multiple-outline"></i>
-                        <span> Tasks </span>
+                        <span> Gallery</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarTasks">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="task-list.html">List</a>
+                                <a href="{{ route('gallery.view') }}">View Gallery</a>
                             </li>
-                            <li>
-                                <a href="task-details.html">Details</a>
-                            </li>
-                            <li>
-                                <a href="task-kanban-board.html">Kanban Board</a>
-                            </li>
+
                         </ul>
                     </div>
                 </li>

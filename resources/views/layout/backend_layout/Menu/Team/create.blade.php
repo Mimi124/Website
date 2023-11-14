@@ -116,13 +116,13 @@
                                      </div> <!-- end col -->
 
 
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                            <label for="image" class="form-label"> </label>
-                                            <img id="image" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
-                                                    alt="slider-image">
+                                     <div class="col-md-12">
+                                        <div class="mb-3">
+                                        <label for="example-fileinput" class="form-label"> </label>
+                                        <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
+                                        alt="profile-image">
                                         </div>
-                                     </div> <!-- end col -->
+                                    </div> <!-- end col -->
 
                                 </div> <!-- end row -->
 
@@ -149,6 +149,19 @@
     </div> <!-- container -->
 
 </div> <!-- content -->
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+    $('#image').change(function(e){
+    var reader = new FileReader();
+    reader.onload =  function(e){
+    $('#showImage').attr('src',e.target.result);
+    }
+    reader.readAsDataURL(e.target.files['0']);
+    });
+    });
+    </script>
 
 
 @endsection

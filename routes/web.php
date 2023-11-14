@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\FactsController;
 use App\Http\Controllers\Backend\FeatureController;
+use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\OurBlogController;
 use App\Http\Controllers\Backend\OurGoalController;
 use App\Http\Controllers\Backend\SliderController;
@@ -133,5 +134,19 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
 
 //Frontend About
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/gallery', [FrontendController::class, 'Photo'])->name('gallery');
+
+
+Route::put('gallery-title-update', [GalleryController::class, 'updateTitle'])->name('gallery.title.update');
+Route::controller(GalleryController::class)->prefix('gallery')->name('gallery.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
 
 require __DIR__.'/auth.php';

@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Features::factory(3)->create();
         // $this->call(TeamTitleSeeder::class);
         $this->call(OurBlogTitleSeeder::class);
+        $this->call(GalleryTitleSeeder::class);
 
     }
 }

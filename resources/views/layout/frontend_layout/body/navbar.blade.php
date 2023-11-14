@@ -25,7 +25,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Media</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="feature.html" class="dropdown-item">News and Notice</a>
-                    <a href="" class="dropdown-item">Photo Gallery</a>
+                    <a href="{{ route('gallery') }}" class="dropdown-item">Photo Gallery</a>
                     <a href="team.html" class="dropdown-item">Audio & Videos</a>
                     <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Facts;
 use App\Models\Features;
+use App\Models\Gallery;
 use App\Models\OurBlog;
 use App\Models\OurGoal;
 use App\Models\SectionTitle;
@@ -22,11 +23,13 @@ class FrontendController extends Controller
         // dd($sectionTitles);
 
         $sliders = Slider::where('status', 1)->get();
+        // dd($sliders);
         $features = Features::where('status', 1)->get();
         $goals = OurGoal::where('status', 1)->get();
         $teams = Teams::where('status', 1)->get();
         $facts = Facts::get();
         $blogs = OurBlog::take(2)->get();
+
 
         return view("layout.frontend_layout.index",
         compact(
@@ -55,9 +58,45 @@ class FrontendController extends Controller
 
 
     function about() : View {
+        $keys = [
+            'team_title',
+            'team_subtitle',
+        ];
 
-        return view('frontend_pages.About.about');
+        $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
 
+
+        $facts = Facts::get();
+        $teams = Teams::where('status', 1)->get();
+
+
+
+
+        return view('frontend_pages.About.about',
+        compact(
+                'teams',
+                'facts',
+                'sectionTitles',
+
+
+         ));
+
+
+
+    }
+
+
+    function Photo() : View {
+        $keys = [
+            'gallery_title',
+            'gallery_subtitle',
+        ];
+
+        $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
+
+        $gallery = Gallery::latest()->get();
+
+        return view('frontend_pages.Photo.gallery',compact('sectionTitles','gallery'));
     }
 
 
