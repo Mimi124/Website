@@ -189,7 +189,7 @@ h6,
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -234,42 +234,404 @@ h6,
 /*** Blog Start ***/
 .blog-item .blog-btn {
     z-index: 2;
-    
+
 }
 
-.blog-btn .blog-btn-icon {
-    height: 50px;
-    position: relative;
+/* line 4, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+.home-blog-area .home-blog-single {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  /* line 7, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-img {
     overflow: hidden;
-    
-}
-
-.blog-btn-icon .blog-icon-2 {
-    display: flex;
-    position: absolute;
-    top: 5px;
-    left: -140px;
-    
-}
-
-.blog-btn-icon:hover .blog-icon-2 {
-    transition: 1s;
-    left: 5px;
-    top: 6px;
-    padding-bottom: 5px;
-    
-}
-.blog-icon-1 {
     position: relative;
-    top: -4px;
-}
-.blog-btn-icon:hover .blog-icon-1 {
+  }
+
+  /* line 10, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-img img {
+    width: 100%;
+    -webkit-transform: scale 1;
+    -moz-transform: scale 1;
+    -ms-transform: scale 1;
+    transform: scale 1;
+    transition: all 0.3s ease-out 0s;
+  }
+
+  /* line 16, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
+    background: #fff;
+    padding: 22px 29px 11px 9px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* line 16, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
+      padding: 37px 23px 37px 20px;
+    }
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* line 16, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
+      padding: 19px 8px 17px 18px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* line 16, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
+      padding: 19px 8px 17px 18px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    /* line 16, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
+      padding: 19px 8px 17px 18px;
+    }
+  }
+
+  /* line 34, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap p {
+    color: #707b8e;
+  }
+
+  /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
+    color: #191d34;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    display: block;
+    text-transform: capitalize;
+  }
+
+  /* line 45, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a:hover {
+    color: #045817;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
+      font-size: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
+      font-size: 23px;
+    }
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
+      font-size: 19px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
+      font-size: 19px;
+    }
+  }
+
+  /* line 62, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap .more-btn {
+    color: #3a3a3a;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Muli", sans-serif;
+    color: #3a3a3a;
+  }
+
+  /* line 68, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-area .home-blog-single .blog-img-cap .blog-cap .more-btn:hover {
+    color: #086344;
+  }
+
+  /* line 80, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .home-blog-single:hover .blog-img-cap .blog-img img {
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+
+  /* Start Blog Area css
+  ============================================================================================ */
+  /* line 94, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .latest-blog-area .area-heading {
+    margin-bottom: 70px;
+  }
+
+  /* line 99, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .blog_area a {
+    color: "Muli", sans-serif !important;
+    text-decoration: none;
+    transition: .4s;
+  }
+
+  /* line 103, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .blog_area a:hover, .blog_area a :hover {
+    background: -webkit-linear-gradient(131deg, #FF3514 0%, #FF3514 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    transition: .4s;
+  }
+
+  /* line 113, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  /* line 117, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog:hover {
+    box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0.1);
+  }
+
+  /* line 121, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .thumb {
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* line 125, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .thumb:after {
+    content: '';
+    position: absolute;
+    left: 0;
     top: 0;
-    right: -140px;
-    transition: 1s;
-}
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  /* line 138, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog h4 {
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 34px;
+    margin-bottom: 25px;
+  }
+
+  /* line 145, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog a {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* line 155, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .date {
+    color: #666666;
+    text-align: left;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  /* line 163, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .tag {
+    text-align: left;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-weight: 300;
+    margin-right: 22px;
+    position: relative;
+  }
+
+  /* line 173, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .tag:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background: #acacac;
+    right: -12px;
+    top: 7px;
+  }
+
+  @media (max-width: 1199px) {
+    /* line 163, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog .tag {
+      margin-right: 8px;
+    }
+    /* line 187, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog .tag:after {
+      display: none;
+    }
+  }
+
+  /* line 193, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .likes {
+    margin-right: 16px;
+  }
+
+  @media (max-width: 800px) {
+    /* line 113, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog {
+      margin-bottom: 30px;
+    }
+  }
+
+  /* line 201, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .single-blog-content {
+    padding: 30px;
+  }
+
+  /* line 205, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .single-blog-content .meta-bottom p {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  /* line 210, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog .single-blog-content .meta-bottom i {
+    color: #217056;
+    font-size: 13px;
+    margin-right: 7px;
+  }
+
+  @media (max-width: 1199px) {
+    /* line 201, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog .single-blog-content {
+      padding: 15px;
+    }
+  }
+
+  /* line 224, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .single-blog:hover .thumb:after {
+    opacity: .7;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 1199px) {
+    /* line 232, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog h4 {
+      transition: all 300ms linear 0s;
+      border-bottom: 1px solid #dfdfdf;
+      padding-bottom: 14px;
+      margin-bottom: 12px;
+    }
+    /* line 238, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .single-blog h4 a {
+      font-size: 18px;
+    }
+  }
+
+  /* line 246, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog {
+    position: relative;
+  }
+
+  /* line 249, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog .single-blog-content {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  @media (min-width: 992px) {
+    /* line 249, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+    .full_image.single-blog .single-blog-content {
+      bottom: 100px;
+    }
+  }
+
+  /* line 268, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog h4 {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+
+  /* line 274, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog a {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* line 284, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog .date {
+    color: #fff;
+  }
+
+  /* line 289, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .full_image.single-blog:hover .single-blog-content {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  /* Latest Blog Area css
+============================================================================================ */
+/* line 313, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+.l_blog_item .l_blog_text .date {
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* line 317, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .l_blog_item .l_blog_text .date a {
+    font-size: 12px;
+  }
+
+  /* line 323, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .l_blog_item .l_blog_text h4 {
+    font-size: 18px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  /* line 336, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
+  .l_blog_item .l_blog_text p {
+    margin-bottom: 0px;
+    padding-top: 20px;
+  }
+
+  /* End Latest Blog Area css
 
 /*** Blog End ***/
+
+
 
 /*** Service ***/
 .service-item {

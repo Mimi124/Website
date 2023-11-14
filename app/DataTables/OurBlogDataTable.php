@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\OurGoal;
+use App\Models\OurBlog;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class OurGoalDataTable extends DataTable
+class OurBlogDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -23,31 +23,27 @@ class OurGoalDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
         ->addColumn('action', function ($query) {
-            $edit = '<a href="'.route('goal.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
+            $edit = '<a href="'.route('ourBlog.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('goal.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
+            $delete = '<a href="'.route('ourBlog.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
+
 
             return $edit . $delete;
 
         })->addColumn('image', function($query){
-            return '<img width="80px" src="'.asset($query->image).'">';
+            return '<img width="100px" src="'.asset($query->image).'">';
 
-        })->addColumn('status', function($query){
-            if($query->status === 1){
-                return '<span class="btn btn-success waves-effect waves-light">Active</span>';
-            }else {
-                return '<span class="btn btn-warning waves-effect waves-light">InActive</span>';
-            }
         })
-        ->rawColumns(['image', 'action', 'status'])
+        ->rawColumns(['image', 'action'])
         ->setRowId('id');
+
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(OurGoal $model): QueryBuilder
+    public function query(OurBlog $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -58,7 +54,7 @@ class OurGoalDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('our_goal-table')
+                    ->setTableId('ourblog-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -80,23 +76,16 @@ class OurGoalDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->width(60),
-            Column::make('image')->width(150),
-            Column::make('title'),
-            Column::make('subtitle'),
-            Column::make('description')->width(200),
-            Column::make('vision'),
-            Column::make('vision description'),
-            Column::make('leadership'),
-            Column::make('leadership description'),
+            Column::make('id')->width(10),
+            Column::make('image')->width(50),
+            Column::make('topic'),
+            Column::make('date'),
             Column::make('button_link'),
-            Column::make('status'),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
                   ->width(150)
                   ->addClass('text-center'),
-
         ];
     }
 
@@ -105,6 +94,6 @@ class OurGoalDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Our_Goal_' . date('YmdHis');
+        return 'OurBlog_' . date('YmdHis');
     }
 }

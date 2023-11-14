@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Facts;
 use App\Models\Features;
+use App\Models\OurBlog;
 use App\Models\OurGoal;
 use App\Models\SectionTitle;
 use App\Models\Slider;
@@ -25,6 +26,7 @@ class FrontendController extends Controller
         $goals = OurGoal::where('status', 1)->get();
         $teams = Teams::where('status', 1)->get();
         $facts = Facts::get();
+        $blogs = OurBlog::take(2)->get();;
 
         return view("layout.frontend_layout.index",
         compact(
@@ -33,7 +35,8 @@ class FrontendController extends Controller
                 'goals',
                 'sectionTitles',
                 'teams',
-                'facts'
+                'facts',
+                'blogs'
         ));
     }
 
@@ -41,6 +44,10 @@ class FrontendController extends Controller
         $keys = [
             'team_title',
             'team_subtitle',
+            'ourblog_title',
+            'ourblog_subtitle',
+            'ourblog_description',
+            'ourblog_url',
         ];
 
         return SectionTitle::whereIn('key', $keys)->pluck('value','key');

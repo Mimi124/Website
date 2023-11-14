@@ -47,6 +47,11 @@
 <!-- Facts End -->
 
 
+   <!-- Blog Start -->
+   @include('layout.frontend_layout.Contents.blog')
+<!-- Blog End -->
+
+
     <!-- Footer Start -->
 
     @include('layout.frontend_layout.body.footer')

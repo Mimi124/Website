@@ -129,13 +129,13 @@ $route = Route::current()->getName();
                 <li>
                     <a href="#sidebarProjects" data-bs-toggle="collapse">
                         <i class="mdi mdi-briefcase-check-outline"></i>
-                        <span> Projects </span>
+                        <span> Our Blog </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarProjects">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="project-list.html">List</a>
+                                <a href='{{ route('ourBlog.view') }}'>View Blog</a>
                             </li>
                             <li>
                                 <a href="project-detail.html">Detail</a>

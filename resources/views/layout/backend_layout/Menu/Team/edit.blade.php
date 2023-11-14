@@ -1,5 +1,5 @@
 @extends('layout.backend_layout.master')
-@section('page_title', 'Edit Carousel - The Ministry of Sanitation and Water Resource')
+@section('page_title', 'Edit Team - The Ministry of Sanitation and Water Resource')
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 

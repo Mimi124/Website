@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\DataTables\Our_GoalDataTable;
+use App\DataTables\OurGoalDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\OurGoalCreateRequest;
 use App\Http\Requests\Backend\OurGoalUpdateRequest;
@@ -18,7 +18,7 @@ class OurGoalController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Our_GoalDataTable $dataTable)
+    public function index(OurGoalDataTable $dataTable)
     {
         return $dataTable->render("layout.backend_layout.Menu.Goals.index");
     }
