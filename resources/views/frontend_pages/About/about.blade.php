@@ -68,51 +68,39 @@
 <div class="whole-wrap">
     <div class="container box_1170">
         <div class="section-top-border">
-            <h3 class="mb-30">Left Aligned</h3>
+            <h3 class="mb-30">Organisational Arrangement</h3>
             <div class="row">
                 <div class="col-md-3">
                     <img src="assets/img/elements/d.jpg" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-9 mt-sm-20">
-                    <p>Recently, the US Federal government banned online casinos from operating in America by making
-                        it illegal to
-                        transfer money to them through any US bank or payment system. As a result of this law, most
-                        of the popular
-                        online casino networks such as Party Gaming and PlayTech left the United States. Overnight,
-                        online casino
-                        players found themselves being chased by the Federal government. But, after a fortnight, the
-                        online casino
-                        industry came up with a solution and new online casinos started taking root. These began to
-                        operate under a
-                        different business umbrella, and by doing that, rendered the transfer of money to and from
-                        them legal. A major
-                        part of this was enlisting electronic banking systems that would accept this new
-                        clarification and start doing
-                        business with me. Listed in this article are the electronic banking systems that accept
-                        players from the United
-                        States that wish to play in online casinos.</p>
+                    <p>The activities of the Ministry is organised and coordinated by six (6) line directorates and one (1) unit.
+
+                        The Ministry has oversight responsibility over three (3) Agencies. These Agencies implement the Ministry’s core policy areas
+                         of Sanitation and Water.
+
+                        The Ministry is the focal point for organising the activities of the sanitation and water sub sectors of the Government Machinery.
+
+                        The organizational structure establishes positions for the office of the Honourable Minister, Deputy Minister, Chief Director as well
+                        as four (4) line Directorates, two (2) Technical Directorates, and an Internal Audit unit.</p>
                 </div>
             </div>
         </div>
         <br>
         <div class="section-top-border text-right">
-            <h3 class="mb-30">Right Aligned</h3>
+            <h3 class="mb-30"> Mandate</h3>
             <div class="row">
                 <div class="col-md-9">
-                    <p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
-                        to run slow if we
-                        don’t do something to prevent it. The reason why has less to do with how computers are made
-                        and how they age and
-                        more to do with the way we use them. You see, all of the daily tasks that we do on our PC
-                        from running programs
-                        to downloading and deleting software can make our computer sluggish. To keep this from
-                        happening, you need to
-                        understand the reasons why your PC is getting slower and do something to keep your PC
-                        running at its best. You
-                        can do this through regular maintenance and PC performance optimization programs</p>
-                    <p class="text-right">Before we discuss all of the things that could be affecting your PC’s
-                        performance, let’s
-                        talk a little about what symptoms</p>
+                    <p class="text-right">The Ministry derives its core mandate primarily from article 190 of the 1992 constitution of the Republic of Ghana,
+                         the Civil Service Law, 1993 (PNDCL 327) and the Civil Service (Ministry) Instrument, 2017 (EI 28), which stipulate that the Ministry shall:</p>
+                         <div class="">
+                            <ul>
+                                <li>Initiate and formulate water, environmental health and sanitation policies taking into account the needs and aspirations of the people;</li>
+                                <li>Undertake water and environmental sanitation sub sectors development planning in consultation with the National Development Planning Commission (NDPC);</li>
+                                <li>Co-ordinate, monitor and evaluate the efficiency and effectiveness of the performance of the sanitation and water sub sectors.</li>
+                             
+                            </ul>
+                        </div>
                 </div>
                 <div class="col-md-3">
                     <img src='{{asset('frontend/assets/img/t.jpg ') }}"' alt="" class="img-fluid">
@@ -120,27 +108,51 @@
             </div>
         </div>
 
+        <div class="section-top-border">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-defination">
+                        <h4 class="mb-20">Mission</h4>
+                        <p>To formulate and implement policies, plans and programmes for the sustainable management of the nation’s water resources, the provision of safe,
+                             adequate and affordable water; provision of environmental sanitation facilities, effective and sustainable management of liquid
+                              and solid waste for the well-being of all people living in the country.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-defination">
+                        <h4 class="mb-20"></h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-defination">
+                        <h4 class="mb-20">Core Value</h4>
+                        <div class="">
+                            <ul>
+                                <li>Excellence</li>
+                                <li>Transparency</li>
+                                <li>Sustainability</li>
+                                <li>Competence</li>
+                                <li>Accountability</li>
+                                <li>Impact and Outcome Driven</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="section-top-border">
-            <h3 class="mb-30">Block Quotes</h3>
+            <h3 class="mb-30">  Office of the Chief Director </h3>
             <div class="row">
                 <div class="col-lg-12">
                     <blockquote class="generic-blockquote">
-                        “Recently, the US Federal government banned online casinos from operating in America by
-                        making it illegal to
-                        transfer money to them through any US bank or payment system. As a result of this law, most
-                        of the popular
-                        online casino networks such as Party Gaming and PlayTech left the United States. Overnight,
-                        online casino
-                        players found themselves being chased by the Federal government. But, after a fortnight, the
-                        online casino
-                        industry came up with a solution and new online casinos started taking root. These began to
-                        operate under a
-                        different business umbrella, and by doing that, rendered the transfer of money to and from
-                        them legal. A major
-                        part of this was enlisting electronic banking systems that would accept this new
-                        clarification and start doing
-                        business with me. Listed in this article are the electronic banking”
+                        The Chief Director is the administrative head and supervises the formulation of effective and efficient sector
+                         policies and ensures the consistent implementation of these policies and management practices within the Ministry,
+                         its Departments and Agencies.  In addition, responsible for
+                         the co-ordination and monitoring of all the activities of the various Directorates, and Agencies, to ensure the achievement of sector goals and objectives.
                     </blockquote>
                 </div>
             </div>
