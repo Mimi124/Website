@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\OurBlogController;
 use App\Http\Controllers\Backend\OurGoalController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\TeamsController;
+use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -147,6 +148,19 @@ Route::controller(GalleryController::class)->prefix('gallery')->name('gallery.')
     Route::post('/store','Store')->name('store');
 
 });
+
+
+Route::put('testimonial-title-update', [TestimonialController::class, 'updateTitle'])->name('testimonial.title.update');
+Route::controller(TestimonialController::class)->prefix('testimonial')->name('testimonial.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
 
 
 require __DIR__.'/auth.php';

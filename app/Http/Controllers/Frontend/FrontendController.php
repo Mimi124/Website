@@ -11,6 +11,7 @@ use App\Models\OurGoal;
 use App\Models\SectionTitle;
 use App\Models\Slider;
 use App\Models\Teams;
+use App\Models\Testimonial;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -29,6 +30,7 @@ class FrontendController extends Controller
         $teams = Teams::where('status', 1)->get();
         $facts = Facts::get();
         $blogs = OurBlog::take(2)->get();
+        $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
 
 
         return view("layout.frontend_layout.index",
@@ -39,7 +41,8 @@ class FrontendController extends Controller
                 'sectionTitles',
                 'teams',
                 'facts',
-                'blogs'
+                'blogs',
+                'testimonials',
         ));
     }
 
@@ -51,6 +54,8 @@ class FrontendController extends Controller
             'ourblog_subtitle',
             'ourblog_description',
             'ourblog_url',
+            'testimonial_title',
+            'testimonial_subtitle',
         ];
 
         return SectionTitle::whereIn('key', $keys)->pluck('value','key');

@@ -163,6 +163,24 @@ $route = Route::current()->getName();
                     </div>
                 </li>
 
+
+                <li>
+                    <a href="#sidebarTickets" data-bs-toggle="collapse">
+                        <i class="mdi mdi-lifebuoy"></i>
+                        <span> Testimonial</span> </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarTickets">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('testimonial.view') }}">View Testimonial</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
                 <li>
                     <a href="#sidebarContacts" data-bs-toggle="collapse">
                         <i class="mdi mdi-book-account-outline"></i>
@@ -181,23 +199,6 @@ $route = Route::current()->getName();
                     </div>
                 </li>
 
-                <li>
-                    <a href="#sidebarTickets" data-bs-toggle="collapse">
-                        <i class="mdi mdi-lifebuoy"></i>
-                        <span> Tickets </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <div class="collapse" id="sidebarTickets">
-                        <ul class="nav-second-level">
-                            <li>
-                                <a href="tickets-list.html">List</a>
-                            </li>
-                            <li>
-                                <a href="tickets-detail.html">Detail</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
 
 
 

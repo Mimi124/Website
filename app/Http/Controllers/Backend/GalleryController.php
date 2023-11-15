@@ -42,7 +42,7 @@ class GalleryController extends Controller
             'image' => 'required','unique'
         ],
         [
-            'image.required' => 'Employee Name Field Is Required',
+            'image.required' => 'Image Field Is Required',
         ],
     );
 

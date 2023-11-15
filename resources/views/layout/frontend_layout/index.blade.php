@@ -34,7 +34,9 @@
 
 
 
-
+<!-- Blog Start -->
+@include('layout.frontend_layout.Contents.testimonial')
+<!-- Blog End -->
 
 
 @endsection

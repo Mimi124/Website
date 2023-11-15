@@ -894,6 +894,8 @@ h6,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
     color: var(--light);
+
+    
 }
 
 
