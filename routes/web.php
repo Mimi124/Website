@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\AgenciesController;
 use App\Http\Controllers\Backend\FactsController;
 use App\Http\Controllers\Backend\FeatureController;
 use App\Http\Controllers\Backend\GalleryController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Backend\TeamsController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Agencies;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -152,6 +154,17 @@ Route::controller(GalleryController::class)->prefix('gallery')->name('gallery.')
 
 Route::put('testimonial-title-update', [TestimonialController::class, 'updateTitle'])->name('testimonial.title.update');
 Route::controller(TestimonialController::class)->prefix('testimonial')->name('testimonial.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
+Route::put('agency-title-update', [AgenciesController::class, 'updateTitle'])->name('agency.title.update');
+Route::controller(AgenciesController::class)->prefix('agency')->name('agency.')->group(function () {
     Route::get('/create', 'Create')->name('create');
     Route::get('/view', 'Index')->name('view');
     Route::get('/edit/{id}','Edit')->name('edit');

@@ -2,45 +2,47 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\DataTables\GalleryDataTable;
+use App\DataTables\AgenciesDataTable;
 use App\Http\Controllers\Controller;
-use App\Models\Gallery;
+use App\Models\Agencies;
 use App\Models\SectionTitle;
+use Carbon\Carbon;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
 
-class GalleryController extends Controller
+class AgenciesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(GalleryDataTable $dataTable)
+    public function index(AgenciesDataTable $dataTable)
     {
-        $keys =[ 'gallery_title','gallery_subtitle'];
+        $keys =[ 'agency_title'];
         $titles = SectionTitle::Wherein('key', $keys)->pluck('value','key');
-        // dd($titles['gallery_title']);
-        return $dataTable->render("layout.backend_layout.Menu.Gallery.index", compact('titles'));
+        //  dd($titles);
+
+        return $dataTable->render("layout.backend_layout.Menu.Agencies.index", compact('titles'));
 
     }
-
 
     /**
      * Show the form for creating a new resource.
      */
     public function create() : View
     {
-        return view('layout.backend_layout.Menu.Gallery.create');
+        return view('layout.backend_layout.Menu.Agencies.create');
     }
+
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
         $validateData = $request->validate([
+            'name'=> 'required',
             'status'=> 'required',
-            'image' => 'required','unique|galleries'
+            'image' => 'required',
         ],
         [
             'image.required' => 'Image Field Is Required',
@@ -49,11 +51,12 @@ class GalleryController extends Controller
 
         $image = $request->file('image');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(300,300)->save('upload/gallery/'.$name_gen);
-        $save_url = 'upload/gallery/'.$name_gen;
+        Image::make($image)->resize(300,300)->save('upload/agencies/'.$name_gen);
+        $save_url = 'upload/agencies/'.$name_gen;
 
 
-        Gallery::insert([
+        Agencies::insert([
+            'name' => $request->name,
             'status' => $request->status,
             'image' => $save_url,
             'created_at' => Carbon::now(),
@@ -61,12 +64,11 @@ class GalleryController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'Image Uploaded Successfully',
+            'message' => 'Agency Uploaded Successfully',
             'alert-type' => 'success'
         );
 
-        return redirect()->route('gallery.view')->with($notification);
-
+        return redirect()->route('agency.view')->with($notification);
     }
 
     /**
@@ -74,7 +76,7 @@ class GalleryController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -82,8 +84,9 @@ class GalleryController extends Controller
      */
     public function edit(string $id)
     {
-        $gallery = Gallery::findOrFail($id);
-        return view('layout.backend_layout.Menu.Gallery.edit',compact('gallery'));
+        $agency = Agencies::findOrFail($id);
+        return view('layout.backend_layout.Menu.Agencies.edit',compact('agency'));
+
     }
 
     /**
@@ -92,7 +95,7 @@ class GalleryController extends Controller
     public function update(Request $request, string $id)
     {
 
-        $gallery = $request->id;
+        $agency = $request->id;
         if($request->file('image')){
 
         $image = $request->file('image');
@@ -100,7 +103,8 @@ class GalleryController extends Controller
         Image::make($image)->resize(300,300)->save('upload/gallery/'.$name_gen);
         $save_url = 'upload/gallery/'.$name_gen;
 
-        Gallery::findOrFail($gallery)->update([
+        Agencies::findOrFail($agency)->update([
+            'name'=> $request->name,
             'status' => $request->status,
             'image' => $save_url,
             'created_at' => Carbon::now(),
@@ -108,7 +112,7 @@ class GalleryController extends Controller
         ]);
 
          $notification = array(
-            'message' => 'Gallery Updated with Image Successfully',
+            'message' => 'Agency Updated with Image Successfully',
             'alert-type' => 'success'
         );
 
@@ -116,44 +120,44 @@ class GalleryController extends Controller
 
         } else{
 
-            Gallery::findOrFail($gallery)->update([
+            Agencies::findOrFail($agency)->update([
 
+                'name'=> $request->name,
                 'status' => $request->status,
                 'created_at' => Carbon::now(),
 
         ]);
 
         $notification = array(
-            'message' => ' Gallery Updated Successfully',
+            'message' => ' Agency Updated Successfully',
             'alert-type' => 'success'
         );
 
-        return redirect()->route('gallery.view')->with($notification);
+        return redirect()->route('agency.view')->with($notification);
     }
 
     }
+
+
 
     public function updateTitle(Request $request){
         // dd($request->all());
         $request ->validate([
-            'gallery_title' => ['required','max:100'],
-            'gallery_subtitle' => ['required','max:255']
+            'agency_title' => ['required','max:100'],
+
 
         ]);
 
         SectionTitle::updateOrCreate(
-            ['key' => 'gallery_title'],
-            ['value' => $request->gallery_title]
+            ['key' => 'agency_title'],
+            ['value' => $request->agency_title]
         );
 
-        SectionTitle::updateOrCreate(
-            ['key' => 'gallery_subtitle'],
-            ['value' => $request->gallery_subtitle]
-        );
+
 
 
         $notification = array(
-            'message' => 'Gallery Title Updated Successfully',
+            'message' => 'Agency Title Updated Successfully',
             'alert-type' => 'success'
         );
 
@@ -169,14 +173,14 @@ class GalleryController extends Controller
      */
     public function destroy(string $id)
     {
-        $gallery = Gallery::findOrFail($id);
-        $img = $gallery->image;
+        $agency = Agencies::findOrFail($id);
+        $img = $agency->image;
         unlink($img);
 
-        Gallery::findOrFail($id)->delete();
+        Agencies::findOrFail($id)->delete();
 
         $notification = array(
-            'message' => 'Image Deleted Successfully',
+            'message' => 'Agency Deleted Successfully',
             'alert-type' => 'success'
         );
 

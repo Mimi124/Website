@@ -2,7 +2,8 @@
 
 namespace App\DataTables;
 
-use App\Models\Gallery;
+use App\Models\Agencies;
+use App\Models\Agency;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +13,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class GalleryDataTable extends DataTable
+class AgenciesDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -23,9 +24,9 @@ class GalleryDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
         ->addColumn('action', function ($query) {
-            $edit = '<a href="'.route('gallery.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
+            $edit = '<a href="'.route('agency.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('gallery.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
+            $delete = '<a href="'.route('agency.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
 
             return $edit . $delete;
@@ -44,10 +45,11 @@ class GalleryDataTable extends DataTable
         ->rawColumns(['image', 'action','status'])
         ->setRowId('id');
     }
+
     /**
      * Get the query source of dataTable.
      */
-    public function query(Gallery $model): QueryBuilder
+    public function query(Agencies $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -58,7 +60,7 @@ class GalleryDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('gallery-table')
+                    ->setTableId('agencies-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -80,14 +82,16 @@ class GalleryDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->width(60),
-            Column::make('image')->width(600),
-            Column::make('status')->width(200),
-            Column::computed('action')
+                Column::make('id')->width(60),
+                Column::make('name'),
+                Column::make('image')->width(600),
+                Column::make('status')->width(200),
+                Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
                   ->width(100)
                   ->addClass('text-center'),
+
         ];
     }
 
@@ -96,6 +100,6 @@ class GalleryDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Gallery_' . date('YmdHis');
+        return 'Agencies_' . date('YmdHis');
     }
 }

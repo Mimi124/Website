@@ -1,6 +1,6 @@
 
 @extends('layout.backend_layout.master')
-@section('page_title', 'Create Gallery - The Ministry of Sanitation and Water Resource')
+@section('page_title', 'Create Agency - The Ministry of Sanitation and Water Resource')
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -16,7 +16,7 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                     </div>
-                    <h4 class="page-title">Create Gallery</h4>
+                    <h4 class="page-title">Create Agency</h4>
                 </div>
 
                 <div class="col-md-12">
@@ -24,8 +24,20 @@
                         <div class="card-body">
 
                             <div class="tab-pane" id="settings">
-                                <form method="post" action="{{route('gallery.store')}}" enctype="multipart/form-data" >
+                                <form method="post" action="{{route('agency.store')}}" enctype="multipart/form-data" >
                                 @csrf
+
+                  <div class="row">
+
+                                <div class="col-md-8">
+                                    <div class="mb-3">
+                                    <label for="name" class="form-label">Agency Name</label>
+                                    <input type="text" name="name" class="form-control " id="name" >
+
+
+
+                                    </div>
+                                </div>
 
                                 <div class="col-md-8">
                                     <div class="mb-3">
@@ -39,22 +51,22 @@
 
 
                                 <div class="col-md-8">
-                                    <div class="mb-3">
-                                    <label for="example-fileinput" class="form-label"> Image</label>
-                                    <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
-                                    @error('image')
-                                    <span class="text-danger"> {{ $message }} </span>
-                                    @enderror
-                                    </div>
+                                        <div class="mb-3">
+                                          <label for="example-fileinput" class="form-label"> Image</label>
+                                         <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
+                                        @error('image')
+                                        <span class="text-danger"> {{ $message }} </span>
+                                        @enderror
+                                        </div>
                                     </div> <!-- end col -->
 
 
                                     <div class="col-md-12">
-                                    <div class="mb-3">
-                                    <label for="example-fileinput" class="form-label"> </label>
-                                    <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
-                                    alt="profile-image">
-                                    </div>
+                                        <div class="mb-3">
+                                        <label for="example-fileinput" class="form-label"> </label>
+                                        <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
+                                        alt="profile-image">
+                                        </div>
                                     </div> <!-- end col -->
 
 

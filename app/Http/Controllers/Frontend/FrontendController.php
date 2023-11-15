@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Agencies;
 use App\Models\Facts;
 use App\Models\Features;
 use App\Models\Gallery;
@@ -31,6 +32,7 @@ class FrontendController extends Controller
         $facts = Facts::get();
         $blogs = OurBlog::take(2)->get();
         $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
+        $agency = Agencies::where('status', 1)->get();
 
 
         return view("layout.frontend_layout.index",
@@ -43,6 +45,7 @@ class FrontendController extends Controller
                 'facts',
                 'blogs',
                 'testimonials',
+                'agency',
         ));
     }
 
@@ -56,6 +59,7 @@ class FrontendController extends Controller
             'ourblog_url',
             'testimonial_title',
             'testimonial_subtitle',
+            'agency_title',
         ];
 
         return SectionTitle::whereIn('key', $keys)->pluck('value','key');
@@ -100,6 +104,8 @@ class FrontendController extends Controller
         $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
 
         $gallery = Gallery::latest()->get();
+
+        // $gallery = Gallery::where(['status' => 1])->paginate(12);
 
         return view('frontend_pages.Photo.gallery',compact('sectionTitles','gallery'));
     }

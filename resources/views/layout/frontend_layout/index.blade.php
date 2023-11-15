@@ -34,9 +34,13 @@
 
 
 
-<!-- Blog Start -->
+<!-- Testimonials Start -->
 @include('layout.frontend_layout.Contents.testimonial')
-<!-- Blog End -->
+<!-- Testimonials End -->
+
+ <!-- Clients Section - Home Page -->
+ @include('layout.frontend_layout.Contents.agencies')
+  <!-- End Clients Section -->
 
 
 @endsection

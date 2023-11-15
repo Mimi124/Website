@@ -182,6 +182,23 @@ $route = Route::current()->getName();
 
 
                 <li>
+                    <a href="#sidebarAgency" data-bs-toggle="collapse">
+                        <i class="mdi mdi-lifebuoy"></i>
+                        <span> Agencies</span> </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarAgency">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('agency.view') }}">View Agencies</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li>
                     <a href="#sidebarContacts" data-bs-toggle="collapse">
                         <i class="mdi mdi-book-account-outline"></i>
                         <span> Contacts </span>
