@@ -138,6 +138,9 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
 //Frontend About
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/gallery', [FrontendController::class, 'Photo'])->name('gallery');
+Route::get('/contact', [FrontendController::class, 'Contact'])->name('contact');
+
+
 
 
 Route::put('gallery-title-update', [GalleryController::class, 'updateTitle'])->name('gallery.title.update');

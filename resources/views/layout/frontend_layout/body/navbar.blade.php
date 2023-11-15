@@ -26,11 +26,10 @@
                 <div class="dropdown-menu bg-light m-0">
                     <a href="feature.html" class="dropdown-item">News and Notice</a>
                     <a href="{{ route('gallery') }}" class="dropdown-item">Photo Gallery</a>
-                    <a href="team.html" class="dropdown-item">Audio & Videos</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="team.html" class="dropdown-item">Videos</a>
                 </div>
             </div>
-            <a href="" class="nav-item nav-link">Contact</a>
+            <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
         </div>
         <img src="{{asset('frontend/assets/img/flags/gh.png ' ) }}" height="80"  >
     </div>

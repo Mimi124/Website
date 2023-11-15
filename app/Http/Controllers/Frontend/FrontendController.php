@@ -110,5 +110,10 @@ class FrontendController extends Controller
         return view('frontend_pages.Photo.gallery',compact('sectionTitles','gallery'));
     }
 
+    function Contact() : View {
+
+        return view('frontend_pages.Contact.contact');
+    }
+
 
 }

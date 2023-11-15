@@ -55,7 +55,7 @@
                                 <div class="col-md-8">
                                     <div class="mb-3">
                                     <label for="project_counter" class="form-label"> Project Counter</label>
-                                    <input type="number" name="project_counter" class="form-control">
+                                    <input type="text" name="project_counter" class="form-control">
                                 </div>
                                 </div>
 
@@ -64,7 +64,7 @@
                                 <div class="col-md-8">
                                     <div class="mb-3">
                                     <label for="staff_counter" class="form-label"> Staff Counter</label>
-                                    <input type="number" name="staff_counter" class="form-control">
+                                    <input type="text" name="staff_counter" class="form-control">
                                 </div>
                                 </div>
 

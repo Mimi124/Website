@@ -66,7 +66,7 @@
 
             <div class="col-md-8">
                 <div class="mb-3">
-                <label for="project_counter" class="form-label"> Button Link</label>
+                <label for="project_counter" class="form-label"> Project Counter</label>
                 <input type="text" name="project_counter" class="form-control" value="{{ $fact->project_counter }}">
             </div>
             </div>
@@ -78,7 +78,7 @@
             </div>
             </div>
 
- 
+
 
             <div class="col-md-8">
                 <div class="mb-3">
