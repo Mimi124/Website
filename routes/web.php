@@ -177,6 +177,18 @@ Route::controller(AgenciesController::class)->prefix('agency')->name('agency.')-
 
 });
 
+//////////////////ABOUT PAGE////////////////////////////////////////////////////////////////
+Route::put('about-title-update', [AboutController::class, 'updateTitle'])->name('about.title.update');
+Route::controller(AboutController::class)->prefix('about')->name('about.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
 
 
 require __DIR__.'/auth.php';

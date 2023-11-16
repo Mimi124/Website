@@ -48,17 +48,24 @@ class GalleryController extends Controller
     );
 
         $image = $request->file('image');
-        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(300,300)->save('upload/gallery/'.$name_gen);
-        $save_url = 'upload/gallery/'.$name_gen;
+
+        foreach ($image as $image) {
+
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
+
+            //save images in multi upload folder
+             Image::make($image)->save('upload/gallery/'.$name_gen);
+             $save_url = 'upload/gallery/'.$name_gen;
+
+             Gallery::insert([
+                'status' => $request->status,
+                'image' => $save_url,
+                'created_at' => Carbon::now(),
+
+            ]);
+         } // End of the foreach
 
 
-        Gallery::insert([
-            'status' => $request->status,
-            'image' => $save_url,
-            'created_at' => Carbon::now(),
-
-        ]);
 
         $notification = array(
             'message' => 'Image Uploaded Successfully',
@@ -97,7 +104,7 @@ class GalleryController extends Controller
 
         $image = $request->file('image');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(300,300)->save('upload/gallery/'.$name_gen);
+        Image::make($image)->save('upload/gallery/'.$name_gen);
         $save_url = 'upload/gallery/'.$name_gen;
 
         Gallery::findOrFail($gallery)->update([

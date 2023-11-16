@@ -87,6 +87,24 @@ $route = Route::current()->getName();
                     </div>
                 </li>
 
+                <li>
+                    <a href="#sidebarAbout" data-bs-toggle="collapse">
+                        <i class="mdi mdi-book-account-outline"></i>
+                        <span> About </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarAbout">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('about.view') }}">About Page Content</a>
+                            </li>
+                            <li>
+                                <a href="contacts-profile.html">Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
 
 
 
@@ -138,7 +156,7 @@ $route = Route::current()->getName();
                                 <a href='{{ route('ourBlog.view') }}'>View Blog</a>
                             </li>
                             <li>
-                                <a href="project-detail.html">Detail</a>
+                                <a href="project-detail.html">Blog Detail</a>
                             </li>
                             <li>
                                 <a href="project-create.html">Create Project</a>

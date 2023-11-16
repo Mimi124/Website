@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Backend;
 
 use App\DataTables\OurBlogDataTable;
-use App\DataTables\SliderDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\OurBlogCreateRequest;
 use App\Http\Requests\Backend\OurBlogUpdateRequest;

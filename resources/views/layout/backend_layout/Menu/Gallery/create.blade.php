@@ -27,7 +27,7 @@
                                 <form method="post" action="{{route('gallery.store')}}" enctype="multipart/form-data" >
                                 @csrf
 
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="status" class="form-label"> Status</label>
                                        <select name="status" class="form-select" id="" required>
@@ -38,7 +38,7 @@
                                 </div>
 
 
-                                <div class="col-md-8">
+                                {{-- <div class="col-md-8">
                                     <div class="mb-3">
                                     <label for="example-fileinput" class="form-label"> Image</label>
                                     <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
@@ -46,13 +46,23 @@
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
                                     </div>
-                                    </div> <!-- end col -->
+                                    </div> <!-- end col --> --}}
 
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                    <label for="example-fileinput" class="form-label"> Image</label>
+                                    <div class="col-sm-10">
+                                <input name="image[]" class="form-control" type="file" id="image" multiple="" >
+                                    </div>
+                                </div>
+                                </div>
+                                <!-- end row -->
 
                                     <div class="col-md-12">
                                     <div class="mb-3">
                                     <label for="example-fileinput" class="form-label"> </label>
-                                    <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
+                                    <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded avatar-lg img-thumbnail"
                                     alt="profile-image">
                                     </div>
                                     </div> <!-- end col -->

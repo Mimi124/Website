@@ -86,9 +86,9 @@ class OurGoalDataTable extends DataTable
             Column::make('subtitle'),
             Column::make('description')->width(200),
             Column::make('vision'),
-            Column::make('vision description'),
+            Column::make('vision_des'),
             Column::make('leadership'),
-            Column::make('leadership description'),
+            Column::make('leadership_des'),
             Column::make('button_link'),
             Column::make('status'),
             Column::computed('action')

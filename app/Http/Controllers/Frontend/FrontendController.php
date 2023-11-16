@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\About;
 use App\Models\Agencies;
 use App\Models\Facts;
 use App\Models\Features;
@@ -70,6 +71,13 @@ class FrontendController extends Controller
         $keys = [
             'team_title',
             'team_subtitle',
+            'about_title',
+            'about_subtitle',
+            'arrangement_title',
+            'mandate_title',
+            'mission_title',
+            'core_value_title',
+            'chief_title',
         ];
 
         $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
@@ -77,6 +85,7 @@ class FrontendController extends Controller
 
         $facts = Facts::get();
         $teams = Teams::where('status', 1)->get();
+        $about = About::get();
 
 
 
@@ -86,8 +95,7 @@ class FrontendController extends Controller
                 'teams',
                 'facts',
                 'sectionTitles',
-
-
+                'about',
          ));
 
 
