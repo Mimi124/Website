@@ -24,6 +24,14 @@
     <link href="{{asset('frontend/assets/lib/owlcarousel/assets/owl.carousel.min.css ') }}" rel="stylesheet">
     <link href="{{asset('frontend/assets/lib/lightbox/css/lightbox.min.css ') }}" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/hamburgers.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/nice-select.css') }}">
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('frontend/assets/css/bootstrap.min.css ') }}" rel="stylesheet">
 

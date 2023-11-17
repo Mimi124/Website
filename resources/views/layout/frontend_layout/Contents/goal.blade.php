@@ -10,7 +10,7 @@
                 <h3 class="text-success">{!! $item->title !!}</h3>
                     <h1 class="mb-4">{!! $item->subtitle !!}</h1>
                 <p class="mb-4">{!! $item->description !!}</p>
-                <a class="btn btn-primary py-3 px-4" href="{{asset($item->button_link) }}">Explore More</a>
+                <a class="btn btn-primary py-3 px-4" href="{{route('about')}}">Explore More</a>
             </div>
             <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="row g-5">

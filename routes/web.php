@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\AgenciesController;
+use App\Http\Controllers\Backend\BlogCategoryController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\FactsController;
 use App\Http\Controllers\Backend\FeatureController;
 use App\Http\Controllers\Backend\GalleryController;
@@ -139,6 +141,8 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/gallery', [FrontendController::class, 'Photo'])->name('gallery');
 Route::get('/contact', [FrontendController::class, 'Contact'])->name('contact');
+Route::get('/blog', [FrontendController::class,'Blog'])->name('blog');
+Route::get('/blog-details', [FrontendController::class,'blogDetails'])->name('blog-details');
 
 
 
@@ -189,6 +193,29 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
 
 });
 
+//////////////////BLOGS ROUTE/////////////////////////
+
+Route::controller(BlogController::class)->prefix('blog')->name('blog.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
+////////   BLOG CATEGORY ROUTES////////////////////////////////
+
+Route::controller(BlogCategoryController::class)->prefix('blogCategory')->name('blogCategory.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
 
 
 require __DIR__.'/auth.php';

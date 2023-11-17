@@ -123,5 +123,16 @@ class FrontendController extends Controller
         return view('frontend_pages.Contact.contact');
     }
 
+    function Blog() : View {
+
+        return view('frontend_pages.Blog.blog');
+    }
+
+    function blogDetails() : View {
+
+        return view('frontend_pages.Blog.blog-details');
+    }
+
+
 
 }

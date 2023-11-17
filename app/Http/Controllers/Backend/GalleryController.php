@@ -40,7 +40,7 @@ class GalleryController extends Controller
     {
         $validateData = $request->validate([
             'status'=> 'required',
-            'image' => 'required','unique|galleries'
+            'image' => 'required','unique|galleries,image'
         ],
         [
             'image.required' => 'Image Field Is Required',

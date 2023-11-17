@@ -89,7 +89,7 @@ class OurGoalDataTable extends DataTable
             Column::make('vision_des'),
             Column::make('leadership'),
             Column::make('leadership_des'),
-            Column::make('button_link'),
+            // Column::make('button_link'),
             Column::make('status'),
             Column::computed('action')
                   ->exportable(false)

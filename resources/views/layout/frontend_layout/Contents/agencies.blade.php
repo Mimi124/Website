@@ -9,7 +9,7 @@
             @foreach($agency as $key => $item)
             <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="{{asset($item->image) }}" alt="">
+                    <img class="img-fluid mb-2" src="{{asset($item->image) }}" alt="">
 
                     <span class="text-primary">{!! $item->name !!}</span>
 

@@ -155,12 +155,15 @@ $route = Route::current()->getName();
                             <li>
                                 <a href='{{ route('ourBlog.view') }}'>View Blog</a>
                             </li>
+
                             <li>
-                                <a href="project-detail.html">Blog Detail</a>
+                                <a href="{{ route('blogCategory.view') }}">Blog Categories</a>
                             </li>
+
                             <li>
-                                <a href="project-create.html">Create Project</a>
+                                <a href="{{ route('blog.view') }}">All Blogs</a>
                             </li>
+
                         </ul>
                     </div>
                 </li>

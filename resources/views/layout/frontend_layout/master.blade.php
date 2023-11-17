@@ -49,6 +49,14 @@
     <script src="{{asset('frontend/assets/lib/isotope/isotope.pkgd.min.js ') }}"></script>
     <script src="{{asset('frontend/assets/lib/lightbox/js/lightbox.min.js ') }}"></script>
 
+         <!-- Date Picker -->
+         <script src="{{asset('frontend/assets/js/gijgo.min.js') }}"></script>
+
+
+      <!-- Nice-select, sticky -->
+      <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+      <script src="{{ asset('frontend/assets/js/jquery.sticky.js') }}"></script>
+
     <!-- Template Javascript -->
     <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 </body>
