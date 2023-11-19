@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
@@ -55,14 +56,9 @@ class BlogController extends Controller
          ]);
 
         $image = $request->file('image');
-
-        foreach ($image as $image) {
-
-            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-
-            //save images in multi upload folder
-             Image::make($image)->save('upload/blog/'.$name_gen);
-             $save_url = 'upload/blog/'.$name_gen;
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->save('upload/blog/'.$name_gen);
+        $save_url = 'upload/blog/'.$name_gen;
 
              Blog::insert([
              'user_id' => auth()->user()->id,
@@ -77,7 +73,6 @@ class BlogController extends Controller
              'created_at' => Carbon::now(),
 
             ]);
-         } // End of the foreach
 
 
 
@@ -101,17 +96,72 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id): View
     {
-        //
+        $blog = Blog::findOrFail($id);
+        $categories = BlogCategory::all();
+        return view('layout.backend_layout.Menu.Blog.edit', compact('blog', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id) : RedirectResponse
     {
-        //
+
+        $blog = $request->id;
+        if($request->file('image')){
+
+        $image = $request->file('image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->save('upload/blog/'.$name_gen);
+        $save_url = 'upload/blog/'.$name_gen;
+
+
+        Blog::findOrFail($blog)->update([
+
+            'image' => $save_url,
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'category_id' => $request->category,
+            'description' => $request->description,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'status' => $request->status,
+            'created_at' => Carbon::now(),
+
+        ]);
+
+
+        $notification = array(
+            'message' => 'Blog Post Updated With Image Successfully',
+            'alert-type' => 'success'
+        );
+        return to_route('blog.view')->with($notification);
+
+    } else{
+
+        Blog::findOrFail($blog)->update([
+
+
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'category_id' => $request->category,
+            'description' => $request->description,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'status' => $request->status,
+            'created_at' => Carbon::now(),
+
+    ]);
+
+    $notification = array(
+        'message' => ' Blog Updated Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->route('blog.view')->with($notification);
+}
     }
 
     /**

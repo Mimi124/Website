@@ -139,10 +139,15 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
 
 //Frontend About
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
+
+
 Route::get('/gallery', [FrontendController::class, 'Photo'])->name('gallery');
 Route::get('/contact', [FrontendController::class, 'Contact'])->name('contact');
+
+
+//Frontend Blogs Route
 Route::get('/blog', [FrontendController::class,'Blog'])->name('blog');
-Route::get('/blog-details', [FrontendController::class,'blogDetails'])->name('blog-details');
+Route::get('/blog-details/{slug}', [FrontendController::class,'blogDetails'])->name('blog.details');
 
 
 

@@ -6,7 +6,7 @@
                     <h2 class="text-success">{!! @$sectionTitles['ourblog_title'] !!}</h2>
                     <h5 class="display-6 mb-6">{!! @$sectionTitles['ourblog_subtitle'] !!}</h5>
                     <p>{!! @$sectionTitles['ourblog_description'] !!}</p>
-                    <a href="{!! @$sectionTitles['ourblog_url'] !!}" class="all-btn">View More</a>
+                    <a href="{{ route('blog') }}" class="all-btn">View More</a>
                 </div>
             </div>
 
@@ -15,11 +15,11 @@
                 <div class="home-blog-single mb-30">
                     <div class="blog-img-cap">
                         <div class="blog-img">
-                            <img src="{{asset($item->image) }}" alt="">
+                            <img src="{{asset($item->image) }}" alt="{{ $item->title }}">
                         </div>
                         <div class="blog-cap">
-                            <p>{{ $item->date }}</p>
-                            <h3><a href="{{asset($item->button_link) }}">{!! $item->topic !!}</a></h3>
+                            <p><i class="fas fa-calendar-alt"></i> {{ date('F j, Y', strtotime($item->created_at)) }}</p>
+                            <h3><a href="{{ route('blog.details', $item->slug) }}">{{ truncate($item->title, 30) }}</a></h3>
                         </div>
                     </div>
                 </div>

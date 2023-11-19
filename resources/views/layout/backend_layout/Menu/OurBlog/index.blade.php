@@ -80,33 +80,6 @@
         </section>
 
 
-        <section class="section">
-
-        <!-- start page title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box">
-                    <div class="page-title-right">
-        <ol class="breadcrumb m-0">
-           <a href="{{route('ourBlog.create')}}"  class="btn btn-sm btn-secondary waves-effect waves-light float-end">
-                <i class="mdi mdi-plus-circle">Create New</i> </a>
-        </ol>
-                    </div>
-                    <h4 class="page-title">All Members</h4>
-                </div>
-            </div>
-        </div>
-        <!-- end page title -->
-
-        <div class="col-md-12">
-            <div class="card">
-                <h5 class="card-header">Members Details</h5>
-                <div class="card-body">
-                  {{$dataTable->table() }}
-
-            </div> <!-- end card-->
-        </div>
-    </section>
 
 
 
@@ -116,8 +89,3 @@
 
 
 @endsection
-
-
-@push('scripts')
-    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
-@endpush

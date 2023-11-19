@@ -88,7 +88,7 @@
                                      <div class="col-md-12">
                                         <div class="mb-3">
                                         <label for="example-fileinput" class="form-label"> </label>
-                                        <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="rounded-circle avatar-lg img-thumbnail"
+                                        <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class=" img-thumbnail"
                                         alt="profile-image">
                                         </div>
                                     </div> <!-- end col -->

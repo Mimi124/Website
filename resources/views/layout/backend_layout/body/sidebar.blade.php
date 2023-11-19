@@ -152,16 +152,18 @@ $route = Route::current()->getName();
                     </a>
                     <div class="collapse" id="sidebarProjects">
                         <ul class="nav-second-level">
-                            <li>
-                                <a href='{{ route('ourBlog.view') }}'>View Blog</a>
-                            </li>
 
+                            <li>
+                                <a href="{{ route('blog.view') }}">All Blogs</a>
+                            </li>
+                            
                             <li>
                                 <a href="{{ route('blogCategory.view') }}">Blog Categories</a>
                             </li>
 
+
                             <li>
-                                <a href="{{ route('blog.view') }}">All Blogs</a>
+                                <a href='{{ route('ourBlog.view') }}'>Blog Titles</a>
                             </li>
 
                         </ul>

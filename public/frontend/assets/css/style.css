@@ -421,7 +421,7 @@ h6,
 
   /* line 103, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
   .blog_area a:hover, .blog_area a :hover {
-    background: -webkit-linear-gradient(131deg, #FF3514 0%, #FF3514 99%);
+    background: -webkit-linear-gradient(131deg, #0b2c13 0%, #0b2c13 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
@@ -3412,7 +3412,7 @@ h6,
 
 /* line 103, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .blog_area a:hover, .blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #FF3514 0%, #FF3514 99%);
+  background: -webkit-linear-gradient(131deg, rgb(23, 59, 34) 0%, #183b25 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -3785,6 +3785,8 @@ h6,
 /* line 478, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .single-recent-blog-post .details {
   padding-top: 30px;
+  
+
 }
 
 /* line 481, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
@@ -3900,7 +3902,7 @@ h6,
 
 /* line 599, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .categories_post:hover .categories_details {
-  background: rgba(222, 99, 32, 0.85);
+  background: rgba(10, 29, 17, 0.85);
 }
 
 /*============ blog_left_sidebar css ==============*/
@@ -3934,7 +3936,7 @@ h6,
 
 /* line 633, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .blog_details a:hover {
-  color: #09cc7f;
+  color: #12221c;
 }
 
 /* line 638, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
@@ -4002,7 +4004,7 @@ h6,
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #FF3514;
+  background-color: #0f3d26;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -4097,7 +4099,7 @@ h6,
 
 /* line 783, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .blog_right_sidebar .search_widget .input-group button {
-  background: #FF3514;
+  background: #16422c;
   border-left: 0;
   border: 1px solid #f0e9ff;
   padding: 4px 15px;
@@ -4235,7 +4237,7 @@ h6,
 
 /* line 934, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #FF3514;
+  background: #154621;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -4284,8 +4286,8 @@ h6,
   width: 45px;
   height: 45px;
   border-radius: 0 !important;
-  color: #8a8a8a;
-  border: 1px solid #f0e9ff;
+  color: #3b5246;
+  border: 1px solid #3b5246;
   margin-right: 10px;
 }
 
@@ -4297,9 +4299,9 @@ h6,
 
 /* line 1109, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .blog-pagination .page-item.active .page-link {
-  background-color: #fbf9ff;
-  border-color: #f0e9ff;
-  color: #888888;
+  background-color: #1c4227;
+  border-color: #2d6820;
+  color: #ffffff
 }
 
 /* line 1116, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */

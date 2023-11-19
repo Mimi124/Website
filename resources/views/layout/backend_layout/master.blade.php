@@ -88,6 +88,8 @@
     <!--Quilljs Init js-->
     <script src="{{ asset('backend/assets/js/pages/form-quilljs.init.js') }}"></script>
 
+
+
 {{-- Select 2 --}}
     <script src="{{ asset('backend/assets/libs/selectize/js/standalone/selectize.min.js') }}"></script>
     <script src="{{ asset('backend/assets/libs/mohithg-switchery/switchery.min.js') }}"></script>

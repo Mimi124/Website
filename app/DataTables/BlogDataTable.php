@@ -33,6 +33,14 @@ class BlogDataTable extends DataTable
         })->addColumn('image', function($query){
             return '<img width="80px" src="'.asset($query->image).'">';
 
+        })
+        ->addColumn('category', function($query){
+            return $query->category->name;
+        })
+        ->addColumn('author', function($query){
+            return $query->user->name;
+
+
         })->addColumn('status', function($query){
             if($query->status === 1){
                 return '<span class="btn btn-success waves-effect waves-light">Active</span>';
@@ -40,7 +48,7 @@ class BlogDataTable extends DataTable
                 return '<span class="btn btn-warning waves-effect waves-light">InActive</span>';
             }
         })
-        ->rawColumns(['image', 'action', 'status'])
+        ->rawColumns(['image','category', 'author', 'action', 'status'])
             ->setRowId('id');
     }
 
@@ -62,7 +70,7 @@ class BlogDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(0,'asc')
+                    ->orderBy(0,'desc')
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -84,6 +92,7 @@ class BlogDataTable extends DataTable
             Column::make('image'),
             Column::make('title'),
             Column::make('category'),
+            Column::make('author'),
             Column::make('description'),
             Column::make('status'),
             Column::computed('action')

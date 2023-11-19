@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Agencies;
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Facts;
 use App\Models\Features;
 use App\Models\Gallery;
-use App\Models\OurBlog;
 use App\Models\OurGoal;
 use App\Models\SectionTitle;
 use App\Models\Slider;
@@ -31,7 +32,7 @@ class FrontendController extends Controller
         $goals = OurGoal::where('status', 1)->get();
         $teams = Teams::where('status', 1)->get();
         $facts = Facts::get();
-        $blogs = OurBlog::take(2)->get();
+        $blogs = Blog::where('status', 1)->latest()->take(2)->get();
         $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
         $agency = Agencies::where('status', 1)->get();
 
@@ -123,14 +124,58 @@ class FrontendController extends Controller
         return view('frontend_pages.Contact.contact');
     }
 
-    function Blog() : View {
+    function Blog(Request $request) : View {
 
-        return view('frontend_pages.Blog.blog');
+        $blogs = Blog::with(['category','user'])->where(['status' => 1]);
+
+
+
+        if($request->has('search') && $request->filled('search')){
+            $blogs->where(function($query) use ($request) {
+                $query->where('title', 'like', '%'.$request->search.'%')
+                    ->orWhere('description', 'like', '%'.$request->search.'%');
+            });
+        }
+
+        if($request->has('category') && $request->filled('category')) {
+            $blogs->whereHas('category', function($query) use ($request){
+                $query->where('slug', $request->category);
+            });
+        }
+        $blogs = $blogs->latest()->paginate(2);
+
+        $categories = BlogCategory::withCount(['blogs' => function($query){
+            $query->where('status', 1);
+        }])->where('status', 1)->get();
+
+        return view('frontend_pages.Blog.blog',compact('blogs','categories'));
     }
 
-    function blogDetails() : View {
 
-        return view('frontend_pages.Blog.blog-details');
+    function blogDetails(string $slug) : View {
+        $blog = Blog::with(['user'])->where('slug', $slug)->where('status', 1)->firstOrFail();
+
+
+        $latestBlogs = Blog::select('id', 'title', 'slug', 'created_at', 'image')
+        ->where('status', 1)
+        ->where('id', '!=', $blog->id)
+        ->latest()->take(5)->get();
+
+
+
+    $nextBlog = Blog::select('id', 'title', 'slug', 'image')->where('id', '>', $blog->id)->orderBy('id', 'ASC')->first();
+    $previousBlog = Blog::select('id', 'title', 'slug', 'image')->where('id', '<', $blog->id)->orderBy('id', 'DESC')->first();
+
+        return view('frontend_pages.Blog.blog-details',
+        compact(
+            'blog',
+            'latestBlogs',
+
+            'nextBlog',
+            'previousBlog',
+
+
+            ));
     }
 
 

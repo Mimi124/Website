@@ -57,23 +57,24 @@
                                         </div>
 
 
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="header-title">Blog Post</h4>
 
-                                                        <textarea class="form-control" id="snow-editor" name='description' rows="15">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Blog Post</h4>
+                                        <p class="sub-header">Enter Blog Post</p>
+                                        {{-- <input type="hidden" class="form-control" name="description" value={{ old('description') }} >
+                                        <div id="snow-editor" style="height: 300px;">
 
-                                                            {{ old('description') }}
 
+                                        </div> <!-- end Snow-editor--> --}}
 
-                                                        </textarea> <!-- end Snow-editor-->
-                                                    </div> <!-- end card-body-->
-                                                </div> <!-- end card-->
-                                            </div><!-- end col -->
-                                        </div>
-                                        <!-- end row -->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div><!-- end col -->
+                        </div>
+                        <!-- end row -->
 
 
 
@@ -111,24 +112,20 @@
                                         </div>
 
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-8">
                                             <div class="mb-3">
-                                                <label for="example-fileinput" class="form-label"> Image</label>
-                                                <div class="col-sm-10">
-                                                    <input name="image[]" class="form-control" type="file" id="image"
-                                                        multiple="">
+                                                    <label for="image" class="form-label">Image</label>
+                                                    <input type="file" name="image" id="image" class="form-control ">
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
+                                             </div> <!-- end col -->
 
-                                        <div class="col-md-12">
-                                            <div class="mb-3">
+                                             <div class="col-md-12">
+                                                <div class="mb-3">
                                                 <label for="example-fileinput" class="form-label"> </label>
-                                                <img id="showImage" src="{{ url('upload/no_image.jpg') }}"
-                                                    class=" avatar-lg img-thumbnail" alt="profile-image">
-                                            </div>
-                                        </div> <!-- end col -->
+                                                <img id="showImage" src="{{  url('upload/no_image.jpg') }}" class="img-thumbnail"
+                                                alt="profile-image">
+                                                </div>
+                                            </div> <!-- end col -->
 
                                     </div> <!-- end row -->
 
