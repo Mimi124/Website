@@ -64,11 +64,13 @@
                                     <div class="card-body">
                                         <h4 class="header-title">Blog Post</h4>
                                         <p class="sub-header">Enter Blog Post</p>
-                                        {{-- <input type="hidden" class="form-control" name="description" value={{ old('description') }} >
+                                        {{-- <input type="hidden" class="form-control" name="description" value={{ old('description') }} > --}}
                                         <div id="snow-editor" style="height: 300px;">
+                                        <textarea id="snow-editor" name="description" class="form-control" placeholder="Description" >
 
-
-                                        </div> <!-- end Snow-editor--> --}}
+                                            {{ old('description') }}
+                                        </textarea> <!-- end Snow-editor-->
+                                        </div>
 
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card-->
