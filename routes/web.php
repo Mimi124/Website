@@ -117,13 +117,7 @@ Route::controller(FactsController::class)->prefix('facts')->name('fact.')->group
 
 Route::put('ourBlog-title-update', [OurBlogController::class, 'updateTitle'])->name('ourblog.title.update');
 Route::controller(OurBlogController::class)->prefix('ourBlog')->name('ourBlog.')->group(function () {
-    Route::get('/create', 'Create')->name('create');
     Route::get('/view', 'Index')->name('view');
-    Route::get('/edit/{id}','Edit')->name('edit');
-    Route::post('/update/{id}','Update')->name('update');
-    Route::get('/delete/{id}','Destroy')->name('delete');
-    Route::post('/store','Store')->name('store');
-
 });
 
 

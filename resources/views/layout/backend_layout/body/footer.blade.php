@@ -2,14 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <script>document.write(new Date().getFullYear())</script> &copy; R&H-HOSPITAL theme by <a href="">Mims</a> 
-            </div>
-            <div class="col-md-6">
-                <div class="text-md-end footer-links d-none d-sm-block">
-                    <a href="javascript:void(0);">About Us</a>
-                    <a href="javascript:void(0);">Help</a>
-                    <a href="javascript:void(0);">Contact Us</a>
-                </div>
+                <script>document.write(new Date().getFullYear())</script> &copy; The Ministry of Sanitation and Water Resource
             </div>
         </div>
     </div>

@@ -18,16 +18,25 @@
                     <a href="404.html" class="dropdown-item">Past Events</a>
                 </div>
             </div>
-            <a href="" class="nav-item nav-link">Projects</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                <div class="dropdown-menu bg-light m-0">
+                    <a href="#" class="dropdown-item">Sanitation</a>
+                    {{-- <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu item 2</a></li> --}}
+                    <a href="#" class="dropdown-item">Water Resources</a>
+
+                </div>
+            </div>
 
 
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Media</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="{{ route('blog') }}" class="dropdown-item">News</a>
-                    {{-- <a href="{{ route('blog.details',$blog->slug) }}" class="dropdown-item">Blog Details</a> --}}
                     <a href="{{ route('gallery') }}" class="dropdown-item">Photo Gallery</a>
-                    <a href="team.html" class="dropdown-item">Videos</a>
+                    <a href="#" class="dropdown-item">Videos</a>
                 </div>
             </div>
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>

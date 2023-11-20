@@ -339,7 +339,7 @@ h6,
 
   /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
   .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
-    color: #191d34;
+    color: #0f6636;
     font-size: 17px;
     font-weight: 100;
     line-height: 1.4;
@@ -975,7 +975,7 @@ h6,
 
          /* Element */
 .element {
-  background-color: #FF3514;
+  background-color: #123519;
   color: white;
   margin-right: 5px;
   margin-left: 5px;
@@ -1028,14 +1028,14 @@ h6,
 
 /* line 1065, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 .all-btn {
-  color: #FF3514;
+  color: #0c300f;
   text-decoration: underline;
   font-size: 16px;
 }
 
 /* line 1069, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 .all-btn:hover {
-  color: #FF3514;
+  color: #0f6636;
   text-decoration: underline;
   letter-spacing: 1px;
 }
@@ -3261,7 +3261,7 @@ h6,
 
 /* line 141, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_footer.scss */
 .footer-social > a:hover {
-  color: #FF3514;
+  color: #0f6636;
 }
 
 /* line 4, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
@@ -3343,7 +3343,7 @@ h6,
 
 /* line 45, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a:hover {
-  color: #FF3514;
+  color: #113615;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3785,7 +3785,7 @@ h6,
 /* line 478, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_blog_page.scss */
 .single-recent-blog-post .details {
   padding-top: 30px;
-  
+
 
 }
 

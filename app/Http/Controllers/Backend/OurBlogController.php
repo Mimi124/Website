@@ -20,7 +20,7 @@ class OurBlogController extends Controller
      */
     public function index()
     {
-        $keys =[ 'ourblog_title','ourblog_subtitle','ourblog_description','ourblog_url'];
+        $keys =[ 'ourblog_title','ourblog_subtitle','ourblog_description'];
         $titles = SectionTitle::Wherein('key', $keys)->pluck('value','key');
 // dd($titles);
 
@@ -30,5 +30,5 @@ class OurBlogController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-   
+
 }
