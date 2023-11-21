@@ -32,6 +32,14 @@
 @include('layout.frontend_layout.Contents.blog')
 <!-- Blog End -->
 
+<!-- Blog Start -->
+@include('layout.frontend_layout.Contents.events')
+<!-- Blog End -->
+
+
+<!-- Blog Start -->
+@include('layout.frontend_layout.Contents.projects')
+<!-- Blog End -->
 
 
 <!-- Testimonials Start -->
