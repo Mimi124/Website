@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\BlogCategory;
+use App\Models\ProjectCategory;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class BlogCategoryDataTable extends DataTable
+class ProjectCategoryDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -23,9 +23,9 @@ class BlogCategoryDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
         ->addColumn('action', function ($query) {
-            $edit = '<a href="'.route('blogCategory.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
+            $edit = '<a href="'.route('projectCategory.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
             <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('blogCategory.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
+            $delete = '<a href="'.route('projectCategory.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
             <i class="fa fa-trash" aria-hidden="true"></i></a>';
 
             return $edit . $delete;
@@ -47,7 +47,7 @@ class BlogCategoryDataTable extends DataTable
     /**
      * Get the query source of dataTable.
      */
-    public function query(BlogCategory $model): QueryBuilder
+    public function query(ProjectCategory $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -58,11 +58,11 @@ class BlogCategoryDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('blogcategory-table')
+                    ->setTableId('projectcategory-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(0,'desc')
+                    ->orderBy('0','desc')
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -98,6 +98,6 @@ class BlogCategoryDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'BlogCategory_' . date('YmdHis');
+        return 'ProjectCategory_' . date('YmdHis');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\BlogCategory;
+use App\Models\ProjectItem;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class BlogCategoryDataTable extends DataTable
+class ProjectItemDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -22,32 +22,14 @@ class BlogCategoryDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-        ->addColumn('action', function ($query) {
-            $edit = '<a href="'.route('blogCategory.edit', $query->id).'" class="btn btn-soft-info rounded-pill waves-effect waves-light" title="Edit">
-            <i class="fa fa-pencil" aria-hidden="true"></i></a>';
-            $delete = '<a href="'.route('blogCategory.delete', $query->id).'" class="btn btn-soft-secondary rounded-pill waves-effect waves-light  mx-1" id="delete" title="Delete">
-            <i class="fa fa-trash" aria-hidden="true"></i></a>';
-
-            return $edit . $delete;
-
-
-        })->addColumn('status', function($query){
-            if($query->status === 1){
-                return '<span class="btn btn-soft-success waves-effect waves-light" title="Active"><i class="fas fa-toggle-on fa-lg"></i></span>';
-            }else {
-                return '<span class="btn btn-soft-danger waves-effect waves-light" title="InActive"><i class="fas fa-toggle-off fa-lg "></i></span>';
-            }
-
-        })
-        ->rawColumns(['action','status'])
-        ->setRowId('id');
-
+            ->addColumn('action', 'projectitem.action')
+            ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(BlogCategory $model): QueryBuilder
+    public function query(ProjectItem $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -58,11 +40,11 @@ class BlogCategoryDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('blogcategory-table')
+                    ->setTableId('projectitem-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(0,'desc')
+                    ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -80,16 +62,15 @@ class BlogCategoryDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id'),
-            Column::make('name'),
-            Column::make('status'),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(100)
+                  ->width(60)
                   ->addClass('text-center'),
-
-
+            Column::make('id'),
+            Column::make('add your columns'),
+            Column::make('created_at'),
+            Column::make('updated_at'),
         ];
     }
 
@@ -98,6 +79,6 @@ class BlogCategoryDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'BlogCategory_' . date('YmdHis');
+        return 'ProjectItem_' . date('YmdHis');
     }
 }

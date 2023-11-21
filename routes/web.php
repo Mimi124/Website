@@ -10,6 +10,8 @@ use App\Http\Controllers\Backend\FeatureController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\OurBlogController;
 use App\Http\Controllers\Backend\OurGoalController;
+use App\Http\Controllers\Backend\ProjectCategoryController;
+use App\Http\Controllers\Backend\ProjectItemController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\TeamsController;
 use App\Http\Controllers\Backend\TestimonialController;
@@ -207,6 +209,28 @@ Route::controller(BlogController::class)->prefix('blog')->name('blog.')->group(f
 ////////   BLOG CATEGORY ROUTES////////////////////////////////
 
 Route::controller(BlogCategoryController::class)->prefix('blogCategory')->name('blogCategory.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
+
+/////////////// PROJECT  ROUTES///////////////
+Route::controller(ProjectCategoryController::class)->prefix('projectCategory')->name('projectCategory.')->group(function () {
+    Route::get('/create', 'Create')->name('create');
+    Route::get('/view', 'Index')->name('view');
+    Route::get('/edit/{id}','Edit')->name('edit');
+    Route::post('/update/{id}','Update')->name('update');
+    Route::get('/delete/{id}','Destroy')->name('delete');
+    Route::post('/store','Store')->name('store');
+
+});
+
+Route::controller(ProjectItemController::class)->prefix('projectItem')->name('projectItem.')->group(function () {
     Route::get('/create', 'Create')->name('create');
     Route::get('/view', 'Index')->name('view');
     Route::get('/edit/{id}','Edit')->name('edit');

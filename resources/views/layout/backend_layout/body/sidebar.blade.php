@@ -145,18 +145,18 @@ $route = Route::current()->getName();
 
 
                 <li>
-                    <a href="#sidebarProjects" data-bs-toggle="collapse">
+                    <a href="#sidebarBlogs" data-bs-toggle="collapse">
                         <i class="mdi mdi-briefcase-check-outline"></i>
                         <span> Our Blog </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    <div class="collapse" id="sidebarProjects">
+                    <div class="collapse" id="sidebarBlogs">
                         <ul class="nav-second-level">
 
                             <li>
                                 <a href="{{ route('blog.view') }}">All Blogs</a>
                             </li>
-                            
+
                             <li>
                                 <a href="{{ route('blogCategory.view') }}">Blog Categories</a>
                             </li>
@@ -169,6 +169,25 @@ $route = Route::current()->getName();
                         </ul>
                     </div>
                 </li>
+
+                <li>
+                    <a href="#sidebarProjects" data-bs-toggle="collapse">
+                        <i class="mdi mdi-book-account-outline"></i>
+                        <span> Projects </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarProjects">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('projectCategory.view') }}">Project Categories</a>
+                            </li>
+                            <li>
+                                <a href="contacts-profile.html">Categories Item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
 
                 <li>
                     <a href="#sidebarTasks" data-bs-toggle="collapse">
@@ -219,6 +238,10 @@ $route = Route::current()->getName();
                         </ul>
                     </div>
                 </li>
+
+
+
+
 
 
                 <li>
