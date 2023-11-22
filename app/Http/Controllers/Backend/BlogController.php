@@ -79,7 +79,7 @@ class BlogController extends Controller
             $img->removeAttribute('src');
             $img->setAttribute('src',$image_name);
         }
-        
+
         $description = $dom->saveHTML();
 
              Blog::insert([
@@ -222,11 +222,11 @@ class BlogController extends Controller
 
         $dom= new DOMDocument();
         $dom->loadHTML($blog->description,9);
-        $images = $dom->getElementsByTagName('img');
+        $images = $dom->getElementsByTagName('imgs');
 
-        foreach ($images as $key => $img) {
+        foreach ($images as $key => $imgs) {
 
-            $src = $img->getAttribute('src');
+            $src = $imgs->getAttribute('src');
             $path = Str::of($src)->after('/');
 
 
@@ -239,7 +239,7 @@ class BlogController extends Controller
         Blog::findOrFail($id)->delete();
 
         $notification = array(
-            'message' => 'Image Deleted Successfully',
+            'message' => 'Blog Deleted Successfully',
             'alert-type' => 'success'
         );
 
