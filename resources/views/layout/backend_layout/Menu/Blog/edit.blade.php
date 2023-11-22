@@ -3,149 +3,131 @@
 @section('content')
 
 
-<div class="content">
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!-- Start Content-->
-<div class="container-fluid">
-
-    <!-- start page title -->
-    <div class="row">
-        <div class="col-12">
-            <div class="page-title-box">
-                <div class="page-title-right">
-                </div>
-                <h4 class="page-title">Update Blog </h4>
-            </div>
-
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-
-                        <form action="{{ route('blog.update',$blog->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-
-
-                            <div class="row">
-
-
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="title" class="form-label">Title</label>
-                                        <input type="text" name="title" class="form-control" id="topic"
-                                            value="{{ $blog->title }}" placeholder="">
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
 
 
-                                    </div>
-                                </div>
+    <div class="content">
 
+        <!-- Start Content-->
+        <div class="container-fluid">
 
-
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="blog-category" class="form-label">Blog Category</label>
-                                        <select name="category" class="form-control select2" id="">
-                                            <option value="">select</option>
-                                            @foreach ($categories as $category)
-                                            <option @selected($category->id === $blog->category_id) value="{{ $category->id }}">{{ $category->name }}</option>
-                                              @endforeach
-
-                                            <option value=""></option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-
-
-
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="header-title">Blog Post</h4>
-                                        <p class="sub-header">Enter Blog Post</p>
-
-                                        <div id="snow-editor"  name='description' style="height: 300px;">
-                                            {!! $blog->description !!}
-
-                                        </div> <!-- end Snow-editor-->
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div><!-- end col -->
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
                         </div>
-                        <!-- end row -->
+                        <h1 class="page-title">Update Blog </h1>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <form action="{{ route('blog.update', $blog->id) }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
+
+
+                                    <div class="row">
+
+
+                                        <div class="col-md-8">
+                                            <div class="mb-3">
+                                                <label for="title" class="form-label">Title</label>
+                                                <input type="text" name="title" class="form-control" id="topic"
+                                                    value="{{ $blog->title }}" placeholder="">
 
 
 
-                                {{-- <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="firstname" class="form-label"> Description </label>
-                                        <textarea class="form-control "  name='description' rows="15">
-
-                                            {!! $blog->description !!}
+                                            </div>
+                                        </div>
 
 
 
-                                        </textarea>
+                                        <div class="col-md-8">
+                                            <div class="mb-3">
+                                                <label for="blog-category" class="form-label">Blog Category</label>
+                                                <select name="category" class="form-control select2" id="">
+                                                    <option value="">select</option>
+                                                    @foreach ($categories as $category)
+                                                        <option @selected($category->id === $blog->category_id) value="{{ $category->id }}">
+                                                            {{ $category->name }}</option>
+                                                    @endforeach
 
-                                    </div>
-                                </div> --}}
+                                                    <option value=""></option>
 
-
-
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="seo_title" class="form-label">Seo Title</label>
-                                        <input type="text" name="seo_title" class="form-control " id="topic"
-                                            value="{{$blog->seo_title }}">
-
-
-
-                                    </div>
-                                </div>
+                                                </select>
+                                            </div>
+                                        </div>
 
 
 
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="seo_description" class="form-label"><strong> Seo Description
-                                            </strong> </label>
-                                        <textarea class="form-control" name="seo_description" id="seo_description" rows="3">{{ $blog->seo_description }}</textarea>
+                                        <div class="col-md-8">
+                                            <div class="mb-3">
+                                                <label for="firstname" class="form-label">Blog Post </label>
+                                                <textarea class="form-control" name="description" id="description" cols="30" rows="10"> {!! $blog->description !!}</textarea>
 
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="status" class="form-label"> Status</label>
-                                        <select name="status" class="form-select" id="">
-                                            <option @selected($blog->status === 1) value="1">Active</option>
-                                            <option @selected($blog->status === 0) value="0">Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                            </div>
+                                        </div>
 
 
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="example-fileinput" class="form-label"> Image</label>
-                                        <div class="col-sm-10">
-                                            <input name="image" class="form-control" type="file" id="image">
+
+
+                                    <div class="col-md-8">
+                                        <div class="mb-3">
+                                            <label for="seo_title" class="form-label">Seo Title</label>
+                                            <input type="text" name="seo_title" class="form-control " id="topic"
+                                                value="{{ $blog->seo_title }}">
+
+
 
                                         </div>
                                     </div>
-                                </div>
-                                <!-- end row -->
 
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <label for="example-fileinput" class="form-label"> </label>
-                                        <img id="showImage" src="{{  asset($blog->image) }}"
-                                            class=" avatar-lg img-thumbnail" alt="profile-image">
+
+
+                                    <div class="col-md-8">
+                                        <div class="mb-3">
+                                            <label for="seo_description" class="form-label"> Seo Description </label>
+                                            <textarea class="form-control" name="seo_description" id="seo_description" rows="3">{{ $blog->seo_description }}</textarea>
+
+                                        </div>
                                     </div>
-                                </div> <!-- end col -->
+
+
+                                    <div class="col-md-8">
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label"> Status</label>
+                                            <select name="status" class="form-select" id="">
+                                                <option @selected($blog->status === 1) value="1">Active</option>
+                                                <option @selected($blog->status === 0) value="0">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="mb-3">
+                                            <label for="image" class="form-label">Image</label>
+                                            <input type="file" name="image" id="image" class="form-control ">
+                                        </div>
+                                    </div> <!-- end col -->
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="example-fileinput" class="form-label"> </label>
+                                            <img id="showImage" src="{{ asset($blog->image) }}"
+                                                class="img-thumbnail" alt="profile-image">
+                                        </div>
+                                    </div> <!-- end col -->
 
                             </div> <!-- end row -->
 
@@ -154,38 +136,45 @@
                                         class="mdi mdi-content-save"></i> Update</button>
                             </div>
 
-                        </form>
-                    </div>
+                            </form>
+                        </div>
 
-                </div> <!-- end card-->
+                    </div> <!-- end card-->
+                </div>
             </div>
+
+
+
         </div>
-
-
-
     </div>
-</div>
-<!-- end page title -->
+    <!-- end page title -->
 
 
 
 
-</div> <!-- container -->
+    </div> <!-- container -->
 
-</div> <!-- content -->
+    </div> <!-- content -->
 
+    <script>
+        $('#description').summernote({
+            placeholder: 'description...',
+            tabsize:2,
+            height:300
+        });
+    </script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#image').change(function(e) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#showImage').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(e.target.files['0']);
-    });
-});
-</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
 
 
 

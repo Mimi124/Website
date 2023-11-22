@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
 use Str;
+use Illuminate\Support\Facades\File;
+use DOMDocument;
 
 class BlogController extends Controller
 {
@@ -59,6 +61,26 @@ class BlogController extends Controller
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
         Image::make($image)->save('upload/blog/'.$name_gen);
         $save_url = 'upload/blog/'.$name_gen;
+
+
+        $description = $request->description;
+        $dom = new DOMDocument();
+        $dom->loadHTML($description,9);
+
+        $images = $dom->getElementsByTagName('img');
+
+        foreach ($images as $key => $img) {
+
+            $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
+            $image_name =  hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+            Image::make($image)->resize(300,300)->save('upload/blog/'.$image_name);
+            file_put_contents(public_path().$image_name,$data);
+
+            $img->removeAttribute('src');
+            $img->setAttribute('src',$image_name);
+        }
+        
+        $description = $dom->saveHTML();
 
              Blog::insert([
              'user_id' => auth()->user()->id,
@@ -118,6 +140,31 @@ class BlogController extends Controller
         $save_url = 'upload/blog/'.$name_gen;
 
 
+        $description = $request->description;
+
+        $dom = new DOMDocument();
+        $dom->loadHTML($description,9);
+
+        $images = $dom->getElementsByTagName('img');
+
+        foreach ($images as $key => $img) {
+
+            // Check if the image is a new one
+            if (strpos($img->getAttribute('src'),'data:image/') ===0) {
+
+                $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
+                $image_name =  hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+                Image::make($image)->resize(300,300)->save('upload/blog/'.$image_name);
+                file_put_contents(public_path().$image_name,$data);
+
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$image_name);
+            }
+
+        }
+        $description = $dom->saveHTML();
+
+
         Blog::findOrFail($blog)->update([
 
             'image' => $save_url,
@@ -172,6 +219,22 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $img = $blog->image;
         unlink($img);
+
+        $dom= new DOMDocument();
+        $dom->loadHTML($blog->description,9);
+        $images = $dom->getElementsByTagName('img');
+
+        foreach ($images as $key => $img) {
+
+            $src = $img->getAttribute('src');
+            $path = Str::of($src)->after('/');
+
+
+            if (File::exists($path)) {
+                File::delete($path);
+
+            }
+        }
 
         Blog::findOrFail($id)->delete();
 

@@ -82,11 +82,6 @@
     <!-- App js-->
     <script src="{{ asset('backend/assets/js/app.min.js') }}"></script>
 
-    <!--Quilljs Plugins js -->
-    <script src="{{ asset('backend/assets/libs/quill/quill.min.js') }}"></script>
-
-    <!--Quilljs Init js-->
-    <script src="{{ asset('backend/assets/js/pages/form-quilljs.init.js') }}"></script>
 
 
 

@@ -93,12 +93,11 @@ class BlogDataTable extends DataTable
             Column::make('title'),
             Column::make('category'),
             Column::make('author'),
-            Column::make('description'),
             Column::make('status'),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(150)
+                  ->width(100)
                   ->addClass('text-center'),
 
 
