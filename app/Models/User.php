@@ -47,4 +47,12 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function sendPasswordResetNotification($token)
+{
+    $this->notify(new \Statamic\Notifications\PasswordReset($token));
+
+}
+
+
 }

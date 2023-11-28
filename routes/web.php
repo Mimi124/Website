@@ -17,7 +17,6 @@ use App\Http\Controllers\Backend\TeamsController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Agencies;
 use Illuminate\Support\Facades\Route;
 
 /*

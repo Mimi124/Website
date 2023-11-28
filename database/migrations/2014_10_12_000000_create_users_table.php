@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+           $table->uuid('id')->change();
             $table->string('name');
             $table->string('username', 191)->unique(); // Set a specific key length
             $table->string('phone')->nullable();
