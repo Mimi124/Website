@@ -18,10 +18,14 @@ use App\Models\Testimonial;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Statamic\View\View as StatamicView;
 
 class FrontendController extends Controller
 {
-    function index() : View {
+
+
+    function index()  {
+
         $sectionTitles = $this->getSectionTitles();
 
         // dd($sectionTitles);
@@ -36,19 +40,19 @@ class FrontendController extends Controller
         $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
         $agency = Agencies::where('status', 1)->get();
 
-
-        return view("layout.frontend_layout.index",
+        return (new StatamicView)->layout('layout')->template('home')->with(
         compact(
-                'sliders',
-                'features',
-                'goals',
-                'sectionTitles',
-                'teams',
-                'facts',
-                'blogs',
-                'testimonials',
-                'agency',
-        ));
+            'sliders',
+            'features',
+            'goals',
+            'sectionTitles',
+            'teams',
+            'facts',
+            'blogs',
+            'testimonials',
+            'agency',
+    ));
+
     }
 
     function getSectionTitles() : Collection {

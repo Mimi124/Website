@@ -18,6 +18,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Statamic\Statamic;
 
 /*
 |--------------------------------------------------------------------------
