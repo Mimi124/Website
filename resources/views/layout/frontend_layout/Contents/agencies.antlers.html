@@ -1,0 +1,22 @@
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h3 class="text-success">Agencies</h3>
+
+        </div>
+
+        <div class="row g-4">
+            {{ collection:agencies }}
+            <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded overflow-hidden pb-4">
+                    <img class="img-fluid mb-" src="{{ image:url }}" alt="agencies">
+
+                    <span class="text-primary">{{ title }}</span>
+
+                </div>
+            </div>
+
+            {{ /collection:agencies }}
+        </div>
+    </div>
+</div>

@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "aryehraber/statamic-logbook": "^3.1",
         "doctrine/dbal": "^3.7",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "^2.7",
@@ -13,8 +14,11 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "mitydigital/statamic-google-fonts": "^1.0",
         "statamic/cms": "^4.36",
+        "stefangalescu/statamic-heroicons": "^2.1",
         "stoffelio/statamic-404-logger": "^1.0",
+        "webographen/statamic-admin-log": "^1.0",
         "yajra/laravel-datatables": "^10.1"
     },
     "require-dev": {

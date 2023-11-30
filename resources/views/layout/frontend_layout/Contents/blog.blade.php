@@ -3,14 +3,15 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="section-tittle mb-100">
-                    <h2 class="text-success">{!! @$sectionTitles['ourblog_title'] !!}</h2>
-                    <h5 class="display-6 mb-6">{!! @$sectionTitles['ourblog_subtitle'] !!}</h5>
-                    <p>{!! @$sectionTitles['ourblog_description'] !!}</p>
-                    <a href="{{ route('blog') }}" class="all-btn">View More</a>
+                    <h2 class="text-success">Our Blog</h2>
+                    <h5 class="display-6 mb-6">Latest Blog & News</h5>
+                    <p>Stay updated with our latest news, covering global and local events,
+                         trends, and notable developments across various domains.</p>
+                    <a href="" class="all-btn">View More</a>
                 </div>
             </div>
 
-@foreach ( $blogs as $item)
+{{-- @foreach ( $blogs as $item)
             <div class="col-lg-4 col-md-6">
                 <div class="home-blog-single mb-30">
                     <div class="blog-img-cap">
@@ -24,7 +25,7 @@
                     </div>
                 </div>
             </div>
-@endforeach
+@endforeach --}}
 
         </div>
     </div>

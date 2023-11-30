@@ -1,0 +1,31 @@
+<div class="container-xxl py-5">
+    <div class="container">
+
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+
+            <h2 class="text-success">The Ministers</h2>
+            <h5 class="display-7 mb-5">Dedicated & Experienced Team Leaders</h5>
+
+        </div>
+         <div class="row g-4">
+           {{ collection:our_team }}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded">
+                    <img class="img-fluid" src="{{image:url  }}" alt="">
+                    <div class="team-text">
+                        <h4 class="mb-0">{{ title }}</h4>
+                        <p class="text-primary">{{ position }}</</p>
+                        <div class="team-social d-flex">
+                            <a class="btn btn-square rounded-circle me-2" href="{{ facebook_url }}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square rounded-circle me-2" href="{{ x_url }}"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square rounded-circle me-2" href="{{ insta_url }}"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    {{ /collection:our_team}}
+
+        </div>
+    </div>
+</div>
