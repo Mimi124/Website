@@ -17,6 +17,8 @@
         "mitydigital/statamic-google-fonts": "^1.0",
         "statamic/cms": "^4.36",
         "stefangalescu/statamic-heroicons": "^2.1",
+        "stillat/antlers-components": "^2.1",
+        "stillat/antlers-layouts": "^2.0",
         "stoffelio/statamic-404-logger": "^1.0",
         "webographen/statamic-admin-log": "^1.0",
         "yajra/laravel-datatables": "^10.1"
