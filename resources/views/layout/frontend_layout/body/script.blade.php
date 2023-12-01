@@ -14,7 +14,7 @@
 <script src="{{asset('frontend/assets/lib/parallax/parallax.min.js ') }}"></script>
 <script src="{{asset('frontend/assets/lib/isotope/isotope.pkgd.min.js ') }}"></script>
 <script src="{{asset('frontend/assets/lib/lightbox/js/lightbox.min.js ') }}"></script>
-<script src="{{ asset('frontend') }}/assets/js/popper.min.js"></script>
+<script src="{{asset('frontend') }}/assets/js/popper.min.js"></script>
 
      <!-- Date Picker -->
      <script src="{{asset('frontend/assets/js/gijgo.min.js') }}"></script>

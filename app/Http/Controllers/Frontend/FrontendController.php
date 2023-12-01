@@ -25,27 +25,21 @@ class FrontendController extends Controller
 
 
     function index()  {
-
-        $sectionTitles = $this->getSectionTitles();
-
-        // dd($sectionTitles);
-
-        $sliders = Slider::where('status', 1)->get();
+      $sliders = Slider::where('status', 1)->get();
         // dd($sliders);
         $features = Features::where('status', 1)->get();
-        $goals = OurGoal::where('status', 1)->get();
-        $teams = Teams::where('status', 1)->get();
+        $goals = OurGoal::get();
+        $teams = Teams::get();
         $facts = Facts::get();
-        $blogs = Blog::where('status', 1)->latest()->take(2)->get();
-        $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
-        $agency = Agencies::where('status', 1)->get();
+        $blogs = Blog::latest()->take(2)->get();
+        $testimonials = Testimonial::get();
+        $agency = Agencies::get();
 
         return (new StatamicView)->layout('layout')->template('home')->with(
         compact(
             'sliders',
             'features',
             'goals',
-            'sectionTitles',
             'teams',
             'facts',
             'blogs',
@@ -72,34 +66,19 @@ class FrontendController extends Controller
     }
 
 
-    function about() : View {
-        $keys = [
-            'team_title',
-            'team_subtitle',
-            'about_title',
-            'about_subtitle',
-            'arrangement_title',
-            'mandate_title',
-            'mission_title',
-            'core_value_title',
-            'chief_title',
-        ];
+    function about()  {
 
-        $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
-
-
-        $facts = Facts::get();
+      $facts = Facts::get();
         $teams = Teams::where('status', 1)->get();
         $about = About::get();
 
 
 
 
-        return view('frontend_pages.About.about',
+     return (new StatamicView)->layout('layout')->template('frontend_pages.About.about')->with(
         compact(
                 'teams',
                 'facts',
-                'sectionTitles',
                 'about',
          ));
 

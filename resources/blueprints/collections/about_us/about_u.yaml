@@ -8,6 +8,7 @@ tabs:
             handle: title
             field:
               type: text
+              required: true
               validate:
                 - required
               display: Title
@@ -64,7 +65,7 @@ tabs:
               validate:
                 - required
           -
-            handle: about_image
+            handle: image
             field:
               mode: list
               container: local
@@ -74,7 +75,7 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: 'About Image'
+              display: Image
               icon: assets
               listable: hidden
               instructions_position: above
@@ -83,44 +84,57 @@ tabs:
               hide_display: false
               validate:
                 - required
-          -
-            handle: mandate_title
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'Mandate Title'
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
+              max_files: 1
+              min_files: 1
           -
             handle: mandate
             field:
-              restrict: false
               buttons:
+                - h2
+                - h3
                 - bold
                 - italic
                 - unorderedlist
                 - orderedlist
-                - quote
-                - link
+                - removeformat
+                - anchor
                 - image
                 - table
-              automatic_line_breaks: true
-              automatic_links: false
-              escape_markup: false
-              heading_anchors: false
-              smartypants: false
-              table_of_contents: false
+                - h4
+                - h5
+                - h6
+                - underline
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
               antlers: false
-              type: markdown
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
               display: Mandate
-              icon: markdown
+              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -129,43 +143,51 @@ tabs:
               validate:
                 - required
           -
-            handle: org_title
+            handle: organisational_arrangement
             field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Org_Title
-              icon: text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
-          -
-            handle: organisation_arrangement
-            field:
-              restrict: false
               buttons:
+                - h2
+                - h3
                 - bold
                 - italic
                 - unorderedlist
                 - orderedlist
+                - removeformat
                 - quote
-                - link
+                - anchor
                 - image
                 - table
-              automatic_line_breaks: true
-              automatic_links: false
-              escape_markup: false
-              heading_anchors: false
-              smartypants: false
-              table_of_contents: false
+                - h4
+                - h5
+                - h6
+                - underline
+                - superscript
+                - subscript
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
               antlers: false
-              type: markdown
-              display: 'Organisation Arrangement'
-              icon: markdown
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Organisational Arrangement'
+              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -194,27 +216,53 @@ tabs:
               validate:
                 - required
                 - sometimes
+              max_files: 1
+              min_files: 1
           -
             handle: mission
             field:
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h4
+                - h5
+                - h6
+                - underline
+                - strikethrough
+                - small
+                - codeblock
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
               antlers: false
-              type: textarea
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
               display: Mission
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - sometimes
-          -
-            handle: office_of_the_chief_director
-            field:
-              antlers: false
-              type: textarea
-              display: 'Office of the chief director'
-              icon: textarea
+              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -223,33 +271,72 @@ tabs:
               validate:
                 - required
           -
-            handle: core_value
+            handle: core_values
             field:
-              restrict: false
               buttons:
                 - bold
                 - italic
                 - unorderedlist
                 - orderedlist
-                - quote
-                - link
-                - image
-                - table
-              automatic_line_breaks: true
-              automatic_links: false
-              escape_markup: false
-              heading_anchors: false
-              smartypants: false
-              table_of_contents: false
+                - removeformat
+                - h4
+                - h5
+                - h6
+                - underline
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
               antlers: false
-              type: markdown
-              display: 'Core Value'
-              icon: markdown
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Core Values'
+              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              validate:
+                - required
+          -
+            handle: office_of_the_chief
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Office of the chief'
+              icon: code
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
   sidebar:
     display: Sidebar
     sections:
@@ -261,4 +348,4 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-title: 'About Us'
+title: About
