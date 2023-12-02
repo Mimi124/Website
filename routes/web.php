@@ -140,6 +140,8 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/gallery', [FrontendController::class, 'Photo'])->name('gallery');
 Route::get('/contact', [FrontendController::class, 'Contact'])->name('contact');
 
+Route::get('/video', [FrontendController::class, 'Video'])->name('video');
+
 
 //Frontend Blogs Route
 Route::get('/blog', [FrontendController::class,'Blog'])->name('blog');

@@ -24,7 +24,8 @@
                     <a href="#" class="dropdown-item">Sanitation</a>
                     {{-- <ul class="submenu dropdown-menu">
                         <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                        <li><a class="dropdown-item" href="#">Submenu item 2</a></li> --}}
+                        <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                     --}}
                     <a href="#" class="dropdown-item">Water Resources</a>
 
                 </div>
@@ -36,7 +37,7 @@
                 <div class="dropdown-menu bg-light m-0">
                     <a href="{{ route('blog') }}" class="dropdown-item">News</a>
                     <a href="{{ route('gallery') }}" class="dropdown-item">Photo Gallery</a>
-                    <a href="#" class="dropdown-item">Videos</a>
+                    <a href="{{ route('video') }}" class="dropdown-item">Events Videos</a>
                 </div>
             </div>
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>

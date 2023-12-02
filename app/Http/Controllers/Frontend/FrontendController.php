@@ -73,6 +73,12 @@ class FrontendController extends Controller
 
     }
 
+    function Video() {
+
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Video.videos');
+
+    }
+
     function Contact() : View {
 
         return view('frontend_pages.Contact.contact');
