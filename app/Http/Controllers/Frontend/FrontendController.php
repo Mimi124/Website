@@ -49,57 +49,28 @@ class FrontendController extends Controller
 
     }
 
-    function getSectionTitles() : Collection {
-        $keys = [
-            'team_title',
-            'team_subtitle',
-            'ourblog_title',
-            'ourblog_subtitle',
-            'ourblog_description',
-            'ourblog_url',
-            'testimonial_title',
-            'testimonial_subtitle',
-            'agency_title',
-        ];
-
-        return SectionTitle::whereIn('key', $keys)->pluck('value','key');
-    }
-
-
     function about()  {
 
-      $facts = Facts::get();
-        $teams = Teams::where('status', 1)->get();
-        $about = About::get();
+    //   $facts = Facts::get();
+    //     $teams = Teams::where('status', 1)->get();
 
+     return (new StatamicView)->layout('layout')->template('frontend_pages.About.about');
+    //  ->with(
+    //     compact(
+    //             'teams',
+    //             'facts',
 
-
-
-     return (new StatamicView)->layout('layout')->template('frontend_pages.About.about')->with(
-        compact(
-                'teams',
-                'facts',
-                'about',
-         ));
+    //      ));
 
 
 
     }
 
 
-    function Photo() : View {
-        $keys = [
-            'gallery_title',
-            'gallery_subtitle',
-        ];
+    function Photo() {
 
-        $sectionTitles = SectionTitle::whereIn('key', $keys)->pluck('value','key');
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Photo.gallery');
 
-        $gallery = Gallery::latest()->get();
-
-        // $gallery = Gallery::where(['status' => 1])->paginate(12);
-
-        return view('frontend_pages.Photo.gallery',compact('sectionTitles','gallery'));
     }
 
     function Contact() : View {

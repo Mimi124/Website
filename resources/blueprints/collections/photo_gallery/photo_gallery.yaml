@@ -8,29 +8,20 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
-              validate:
-                - required
-          -
-            handle: subtitle
-            field:
-              antlers: false
-              type: textarea
-              display: Subtitle
-              icon: textarea
-              listable: hidden
+              required: false
               instructions_position: above
-              visibility: visible
+              listable: hidden
+              visibility: hidden
               replicator_preview: true
+              input_type: text
+              antlers: false
               hide_display: false
-              validate:
-                - required
           -
             handle: image
             field:
               max_files: 1
               min_files: 1
-              mode: list
+              mode: grid
               container: local
               restrict: false
               allow_uploads: true
