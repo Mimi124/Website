@@ -1,5 +1,14 @@
 title: 'Our Goals'
+template: frontend_pages/About/about
+layout: layout
 revisions: false
+route: about-us
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

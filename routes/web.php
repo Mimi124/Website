@@ -147,6 +147,8 @@ Route::get('/video', [FrontendController::class, 'Video'])->name('video');
 Route::get('/blog', [FrontendController::class,'Blog'])->name('blog');
 Route::get('/blog-details/{slug}', [FrontendController::class,'blogDetails'])->name('blog.details');
 
+// Route::statamic('search');
+
 
 
 
@@ -158,7 +160,6 @@ Route::controller(GalleryController::class)->prefix('gallery')->name('gallery.')
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 
@@ -170,7 +171,6 @@ Route::controller(TestimonialController::class)->prefix('testimonial')->name('te
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 Route::put('agency-title-update', [AgenciesController::class, 'updateTitle'])->name('agency.title.update');
@@ -181,7 +181,6 @@ Route::controller(AgenciesController::class)->prefix('agency')->name('agency.')-
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 //////////////////ABOUT PAGE////////////////////////////////////////////////////////////////
@@ -193,7 +192,6 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 //////////////////BLOGS ROUTE/////////////////////////
@@ -205,7 +203,6 @@ Route::controller(BlogController::class)->prefix('blog')->name('blog.')->group(f
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 ////////   BLOG CATEGORY ROUTES////////////////////////////////
@@ -217,7 +214,6 @@ Route::controller(BlogCategoryController::class)->prefix('blogCategory')->name('
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 
@@ -229,7 +225,6 @@ Route::controller(ProjectCategoryController::class)->prefix('projectCategory')->
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 Route::controller(ProjectItemController::class)->prefix('projectItem')->name('projectItem.')->group(function () {
@@ -239,7 +234,6 @@ Route::controller(ProjectItemController::class)->prefix('projectItem')->name('pr
     Route::post('/update/{id}','Update')->name('update');
     Route::get('/delete/{id}','Destroy')->name('delete');
     Route::post('/store','Store')->name('store');
-
 });
 
 

@@ -8,6 +8,7 @@ tabs:
             handle: title
             field:
               type: text
+              required: true
               validate:
                 - required
               display: Name

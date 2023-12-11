@@ -1,5 +1,5 @@
 @extends('layout.frontend_layout.master')
-@section('page_title', 'About - The Ministry of Sanitation & Water Resources')
+@section('page_title', 'Contact - The Ministry of Sanitation & Water Resources')
 @section('content')
 
 

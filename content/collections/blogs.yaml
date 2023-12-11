@@ -1,8 +1,12 @@
-title: Agencies
-template: 'D:\Laravel 9\Website\resources\views\layout\frontend_layout\Contents\agencies'
+title: Blogs
+template: frontend_pages/Blog/blog-details
 layout: layout
+taxonomies:
+  - blog_category
 revisions: false
-sort_dir: asc
+route: 'blog/{slug}'
+date: true
+sort_dir: desc
 date_behavior:
   past: public
   future: private

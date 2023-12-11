@@ -84,36 +84,33 @@ class FrontendController extends Controller
         return view('frontend_pages.Contact.contact');
     }
 
-    function Blog(Request $request) : View {
+    function Blog() {
 
-        $blogs = Blog::with(['category','user'])->where(['status' => 1]);
+        $blogs = Blog::get();
 
 
 
-        if($request->has('search') && $request->filled('search')){
-            $blogs->where(function($query) use ($request) {
-                $query->where('title', 'like', '%'.$request->search.'%')
-                    ->orWhere('description', 'like', '%'.$request->search.'%');
-            });
-        }
+        // if($request->has('search') && $request->filled('search')){
+        //     $blogs->where(function($query) use ($request) {
+        //         $query->where('title', 'like', '%'.$request->search.'%')
+        //             ->orWhere('description', 'like', '%'.$request->search.'%');
+        //     });
+        // }
+        Blog::latest()->paginate(10);
 
-        if($request->has('category') && $request->filled('category')) {
-            $blogs->whereHas('category', function($query) use ($request){
-                $query->where('slug', $request->category);
-            });
-        }
-        $blogs = $blogs->latest()->paginate(2);
 
-        $categories = BlogCategory::withCount(['blogs' => function($query){
-            $query->where('status', 1);
-        }])->where('status', 1)->get();
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Blog.blog');
+        // ->with(
+        //         compact(
+        //                 'blogs',
 
-        return view('frontend_pages.Blog.blog',compact('blogs','categories'));
+
+        //          ));
     }
 
 
     function blogDetails(string $slug) : View {
-        $blog = Blog::with(['user'])->where('slug', $slug)->where('status', 1)->firstOrFail();
+        $blog = Blog::where('slug', $slug)->firstOrFail();
 
 
         $latestBlogs = Blog::select('id', 'title', 'slug', 'created_at', 'image')
@@ -126,7 +123,8 @@ class FrontendController extends Controller
     $nextBlog = Blog::select('id', 'title', 'slug', 'image')->where('id', '>', $blog->id)->orderBy('id', 'ASC')->first();
     $previousBlog = Blog::select('id', 'title', 'slug', 'image')->where('id', '<', $blog->id)->orderBy('id', 'DESC')->first();
 
-        return view('frontend_pages.Blog.blog-details',
+    return (new StatamicView)->layout('layout')->template('frontend_pages.Blog.blog-details')
+    ->with(
         compact(
             'blog',
             'latestBlogs',
@@ -137,6 +135,8 @@ class FrontendController extends Controller
 
             ));
     }
+
+
 
 
 

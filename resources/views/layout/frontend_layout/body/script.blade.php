@@ -20,18 +20,18 @@
      <script src="{{asset('frontend/assets/js/gijgo.min.js') }}"></script>
 
        <!-- One Page, Animated-HeadLin -->
-  <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
-  <script src="{{ asset('frontend/assets/js/animated.headline.js') }}"></script>
-  <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/wow.min.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/animated.headline.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/jquery.magnific-popup.js') }}"></script>
 
 <!-- Jquery Mobile Menu -->
-  <script src="{{ asset('frontend/assets/js/jquery.slicknav.min.js') }}"></script>
-  <script src="{{ asset('frontend/assets/js/slick.min.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/jquery.slicknav.min.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/slick.min.js') }}"></script>
 
   <!-- Nice-select, sticky -->
-  <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
-  <script src="{{ asset('frontend/assets/js/jquery.sticky.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+  <script src="{{asset('frontend/assets/js/jquery.sticky.js') }}"></script>
 
 <!-- Template Javascript -->
-<script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
+<script src="{{asset('frontend/assets/js/plugins.js') }}"></script>
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>

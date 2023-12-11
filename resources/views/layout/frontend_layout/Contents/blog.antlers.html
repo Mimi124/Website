@@ -11,21 +11,21 @@
                 </div>
             </div>
 
-{{-- @foreach ( $blogs as $item)
+            {{ collection:blogs limit="2"}}
             <div class="col-lg-4 col-md-6">
                 <div class="home-blog-single mb-30">
                     <div class="blog-img-cap">
                         <div class="blog-img">
-                            <img src="{{asset($item->image) }}" alt="{{ $item->title }}">
+                            <img src="{{image}}" alt="{{ title }}">
                         </div>
                         <div class="blog-cap">
-                            <small><i class="fas fa-calendar-alt"></i> {{ date('F j, Y', strtotime($item->created_at)) }}</small>
-                            <h3><a href="{{ route('blog.details', $item->slug) }}">{{ truncate($item->title, 30) }}</a></h3>
+                            <small><i class="fas fa-calendar-alt"></i> {{ date format="F j, Y" }}</small>
+                            <h3><a href="{{url }}">{{title | safe_truncate(30, '...') }}</a></h3>
                         </div>
                     </div>
                 </div>
             </div>
-@endforeach --}}
+{{ /collection:blogs}}
 
         </div>
     </div>
