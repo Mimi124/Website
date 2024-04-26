@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
            $table->uuid('id')->change();
             $table->string('name');
-            $table->string('username', 191)->unique(); // Set a specific key length
             $table->string('phone')->nullable();
             $table->string('photo')->nullable();
             $table->string('gender')->nullable();

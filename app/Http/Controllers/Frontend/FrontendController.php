@@ -79,9 +79,9 @@ class FrontendController extends Controller
 
     }
 
-    function Contact() : View {
+    function Contact() {
 
-        return view('frontend_pages.Contact.contact');
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Contact.contact');
     }
 
     function Blog() {

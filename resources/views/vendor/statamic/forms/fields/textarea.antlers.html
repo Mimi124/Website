@@ -1,0 +1,11 @@
+<textarea
+    name="{{ handle }}"
+    class=form-control
+    style="height: 200px"
+    {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+    {{ if character_limit }}maxlength="{{ character_limit }}"{{ /if }}
+    {{ if js_driver }}{{ js_attributes }}{{ /if }}
+    {{ if validate|contains:required }}required{{ /if }}
+>
+    {{ value }}
+</textarea>
