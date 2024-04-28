@@ -9,11 +9,10 @@
                             {{ footer:description }}
                         </p>
                         <div class="d-flex hightech-link">
-                            <a href="{{ content_control_fields:facebook }}" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
-                            <a href="{{ content_control_fields:twitter }}" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
-                            <a href="{{ content_control_fields:instagram }}" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
-                            <a href="{{ content_control_fields:linkedln }}" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
-                        </div>
+                            {{ collection:social_media }}
+                        <a href="{{ link }}" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="{{ icon }}"></i></a>
+                            {{ /collection:social_media }}
+                    </div>
                     </div>
 
 

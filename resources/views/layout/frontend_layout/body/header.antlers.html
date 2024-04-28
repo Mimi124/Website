@@ -13,10 +13,9 @@
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center mx-n2">
                 <span>Follow Us:</span>
-                <a class="btn btn-link text-light" href="{{ social_media:facebook }}"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-link text-light" href="{{ social_media:twitter }}"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-link text-light" href="{{ social_media:Linkedin }}"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-link text-light" href="{{ social_media:instagram }}"><i class="fab fa-instagram"></i></a>
+                {{ collection:social_media }}
+                <a class="btn btn-link text-light" href="{{link }}"><i class="{{ icon }}"></i></a>
+               {{ /collection:social_media  }}
             </div>
         </div>
     </div>
