@@ -10,7 +10,7 @@ vision_description: 'Sustainable water and environmental sanitation for all'
 third_title: Leadership
 leadership_description: 'The Ministry is headed by a Minister and supported by one Deputy Minister who provide political leadership.'
 updated_by: 1
-updated_at: 1701448471
+updated_at: 1714336285
 vision: Vision
 leadership: 'Political Leadership'
 ---

@@ -55,12 +55,6 @@ class FrontendController extends Controller
     //     $teams = Teams::where('status', 1)->get();
 
      return (new StatamicView)->layout('layout')->template('frontend_pages.About.about');
-    //  ->with(
-    //     compact(
-    //             'teams',
-    //             'facts',
-
-    //      ));
 
 
 

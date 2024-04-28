@@ -2,21 +2,21 @@
     <div class="row gx-0 d-none d-lg-flex">
         <div class="col-lg-7 px-5 text-start">
             <div class="h-100 d-inline-flex align-items-center me-4">
-                <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-light"></i></a>{{ content_control_fields:address }}  </small>
+                <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-light"></i></a>{{ contacts:address }} &nbsp; P.o.Box: {{ contacts:postal_address }} </small>
             </div>
 
 
             <div class="h-100 d-inline-flex align-items-center">
-               <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-light"></i></a>{{ content_control_fields:email }}</small>
+               <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-light"></i></a>{{ contacts:email }}</small>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center mx-n2">
                 <span>Follow Us:</span>
-                <a class="btn btn-link text-light" href="{{ content_control_fields:facebook }}"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-link text-light" href="{{ content_control_fields:twitter }}"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-link text-light" href="{{ content_control_fields:Linkedln }}"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-link text-light" href="{{ content_control_fields:instagram }}"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-link text-light" href="{{ social_media:facebook }}"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-link text-light" href="{{ social_media:twitter }}"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-link text-light" href="{{ social_media:Linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-link text-light" href="{{ social_media:instagram }}"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>

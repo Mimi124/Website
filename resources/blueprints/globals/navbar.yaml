@@ -5,18 +5,41 @@ tabs:
       -
         fields:
           -
-            handle: image
+            handle: logo
             field:
               max_files: 1
               min_files: 1
-              mode: grid
+              mode: list
               container: local
+              folder: homeimages
               restrict: false
               allow_uploads: true
               show_filename: true
               show_set_alt: true
               type: assets
-              display: Image
+              display: Logo
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+                - image
+          -
+            handle: flag
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: local
+              folder: homeimages
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Flag
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -25,17 +48,3 @@ tabs:
               validate:
                 - sometimes
                 - image
-              folder: homeimages
-          -
-            handle: description
-            field:
-              antlers: false
-              type: textarea
-              display: Description
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - sometimes

@@ -2,11 +2,11 @@
             <div class="container pt-5 pb-4">
                 <div class="row g-5">
                     <div class="col-lg-4 col-md-4">
-                        <a href="">
-                             {{# <img src="" class="img-fluid w-100white rounded" alt="" style="margin-bottom: 1%;"> #}}
-                        </a>
-                        <p class="mt-4 text-light">
-                        The Ministry of Sanitation and Water Resources (MSWR), is a Ministry in the Infrastructure Sector under the Office of the Head of Civil Service.
+                        <a href="{{ route:about }}">
+                             <img src="{{ footer:image}}" class="img-fluid w-100white rounded" alt="{{ footer:image }}" style="margin-bottom: 1%;" >
+                    </a>
+                        <p class="mt-1 text-light">
+                            {{ footer:description }}
                         </p>
                         <div class="d-flex hightech-link">
                             <a href="{{ content_control_fields:facebook }}" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
@@ -31,10 +31,8 @@
                     <div class="col-lg-4 col-md-4">
                         <a href="#" class="h3 text-white">Contact Us</a>
                         <div class="text-white mt-4 d-flex flex-column contact-link">
-                            <a href="#" class="pb-2 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-white me-2"></i>{{ content_control_fields:address }}</a>
-                            <a href="#" class="pb-2 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-white me-2"></i>Digital Address: {{ footer:digital_address }}</a>
-                            <a href="#" class="py-2 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-white me-2"></i>{{ content_control_fields:phone_number }}</a>
-                            <a href="#" class="py-2 text-light border-bottom border-primary"><i class="fas fa-envelope text-white me-2"></i>{{ content_control_fields:email }}</a>
+                            <a href="#" class="pb-2 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-white me-2"></i>{{ contacts:address }} &nbsp;<i class="fas fa-map-marker-alt text-white me-2"></i>{{ contacts:digital_address }}</a>
+                            <a href="#" class="py-2 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-white me-2"></i>{{ contacts:phone_number }} &nbsp;&nbsp;<i class="fas fa-envelope text-white me-2"></i>{{ contacts:email }}</a>
                         </div>
                     </div>
                 </div>
