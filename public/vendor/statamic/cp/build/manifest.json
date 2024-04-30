@@ -839,11 +839,7 @@
       "resources/svg/filetypes/video.svg",
       "resources/svg/filetypes/xml.svg"
     ],
-<<<<<<< HEAD
-    "file": "assets/app-dba30c62.js",
-=======
     "file": "assets/app-dc40c5f2.js",
->>>>>>> 2e99b1ce1d3182e802df262505ced58fa427bede
     "isEntry": true,
     "src": "resources/js/app.js"
   },

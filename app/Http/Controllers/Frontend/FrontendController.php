@@ -11,7 +11,6 @@ use App\Models\Facts;
 use App\Models\Features;
 use App\Models\Gallery;
 use App\Models\OurGoal;
-use App\Models\SectionTitle;
 use App\Models\Slider;
 use App\Models\Teams;
 use App\Models\Testimonial;
@@ -73,14 +72,9 @@ class FrontendController extends Controller
 
     }
 
-<<<<<<< HEAD
-    function Contact(){
 
 
-=======
     function Contact() {
-
->>>>>>> 2e99b1ce1d3182e802df262505ced58fa427bede
         return (new StatamicView)->layout('layout')->template('frontend_pages.Contact.contact');
     }
 
