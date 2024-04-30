@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'The Ministry Of Sanitation and Water Resources'),
+    'name' => ('The Ministry Of Sanitation and Water Resources'),
 
     /*
     |--------------------------------------------------------------------------

@@ -79,14 +79,14 @@ class FrontendController extends Controller
 
     }
 
-    function Contact() : View {
+    function Contact(){
 
-        return view('frontend_pages.Contact.contact');
+
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Contact.contact');
     }
 
     function Blog() {
 
-        $blogs = Blog::get();
 
 
 
@@ -96,7 +96,6 @@ class FrontendController extends Controller
         //             ->orWhere('description', 'like', '%'.$request->search.'%');
         //     });
         // }
-        Blog::latest()->paginate(10);
 
 
         return (new StatamicView)->layout('layout')->template('frontend_pages.Blog.blog');

@@ -88,6 +88,23 @@ tabs:
                 - required
               max_files: 1
               min_files: 1
+          -
+            handle: author
+            field:
+              mode: select
+              default:
+                - 1
+              type: users
+              display: Author
+              icon: users
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+              max_items: 1
   sidebar:
     display: Sidebar
     sections:
