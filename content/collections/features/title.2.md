@@ -8,7 +8,7 @@ description:
     type: heading
     attrs:
       textAlign: left
-      level: 4
+      level: 3
     content:
       -
         type: text
@@ -16,7 +16,7 @@ description:
   -
     type: heading
     attrs:
-      textAlign: left
+      textAlign: center
       level: 5
     content:
       -
@@ -25,7 +25,7 @@ description:
   -
     type: heading
     attrs:
-      textAlign: left
+      textAlign: center
       level: 5
     content:
       -
@@ -34,8 +34,8 @@ description:
   -
     type: heading
     attrs:
-      textAlign: left
+      textAlign: right
       level: 5
 updated_by: 1
-updated_at: 1714335974
+updated_at: 1714389199
 ---

@@ -8,27 +8,7 @@ tabs:
             handle: title
             field:
               type: text
-              required: false
-              instructions_position: above
-              listable: hidden
-              visibility: hidden
-              replicator_preview: true
-              input_type: text
-              antlers: false
-              hide_display: false
-              display: Title
-          -
-            handle: icon
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Icon
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              required: true
               validate:
                 - required
           -
@@ -55,7 +35,6 @@ tabs:
                 - small
                 - superscript
                 - subscript
-                - horizontalrule
                 - alignleft
                 - aligncenter
                 - alignright
@@ -75,6 +54,7 @@ tabs:
               link_noopener: false
               link_noreferrer: false
               target_blank: false
+              container: local
               always_show_set_button: false
               collapse: false
               previews: true
@@ -86,7 +66,29 @@ tabs:
               replicator_preview: true
               hide_display: false
               validate:
+                - sometimes
+          -
+            handle: images
+            field:
+              max_files: 1
+              min_files: 1
+              mode: grid
+              container: local
+              folder: projectimages
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Images
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
                 - required
+                - image
   sidebar:
     display: Sidebar
     sections:
@@ -98,4 +100,12 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-title: Feature
+          -
+            handle: project_category
+            field:
+              type: terms
+              taxonomies:
+                - project_category
+              display: 'Project Category'
+              mode: select
+title: Project

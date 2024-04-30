@@ -18,6 +18,7 @@ tabs:
               hide_display: false
               validate:
                 - sometimes
+                - required
           -
             handle: digital_address
             field:
@@ -47,24 +48,10 @@ tabs:
               validate:
                 - sometimes
           -
-            handle: email
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Email
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - sometimes
-                - email
-          -
             handle: phone_number
             field:
               input_type: text
+              character_limit: 13
               antlers: false
               type: text
               display: 'Phone Number'
@@ -76,4 +63,18 @@ tabs:
               validate:
                 - sometimes
                 - numeric
-              character_limit: 12
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: Email
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - email
