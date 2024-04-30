@@ -1,0 +1,122 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: facebook_icon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Facebook Icon'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: facebook
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: Facebook
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - url
+          -
+            handle: instagram_icon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Instagram Icon'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: instagram
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: Instagram
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - url
+          -
+            handle: twitter_icon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Twitter Icon'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: twitter
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: Twitter
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - url
+          -
+            handle: linkdein_icon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'LinkdeIn Icon'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: linkdein
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: LinkdeIn
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - url

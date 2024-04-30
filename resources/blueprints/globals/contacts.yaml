@@ -1,0 +1,80 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: address
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Address
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - required
+          -
+            handle: digital_address
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Digital Address'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: postal_address
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Postal Address'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+          -
+            handle: phone_number
+            field:
+              input_type: text
+              character_limit: 13
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - numeric
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: Email
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - sometimes
+                - email
