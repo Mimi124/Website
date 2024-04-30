@@ -7,7 +7,7 @@ tabs:
           -
             handle: title
             field:
-<<<<<<< HEAD
+
               type: hidden
               required: false
           -
@@ -17,7 +17,7 @@ tabs:
               type: icon
               display: Icon
               icon: icon_picker
-=======
+
               type: text
               required: false
               instructions_position: above
@@ -91,7 +91,7 @@ tabs:
               previews: true
               type: bard
               display: Description
->>>>>>> 2e99b1ce1d3182e802df262505ced58fa427bede
+
               listable: hidden
               instructions_position: above
               visibility: visible
