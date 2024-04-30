@@ -1,7 +1,12 @@
-import './bootstrap';
+import * as Popper from "@popperjs/core"
+window.Popper = Popper;
 
-import Alpine from 'alpinejs';
+import 'bootstrap';
 
-window.Alpine = Alpine;
+var Isotope = require('isotope-layout');
 
-Alpine.start();
+// import Alpine from 'alpinejs';
+
+// window.Alpine = Alpine;
+
+// Alpine.start();

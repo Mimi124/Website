@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+ {{partial:partials/header}}
 
-<head>
-    {{partial:layout.frontend_layout.body.css}}
-</head>
 
 <body>
     <!-- Spinner Start -->
@@ -14,19 +10,19 @@
 
 
     <!-- Topbar Start -->
-{{ partial:layout.frontend_layout.body.header}}
+{{ partial:partials/topbar}}
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
-    {{ partial:layout.frontend_layout.body.navbar }}
+    {{ partial:partials/navbar }}
     <!-- Navbar End -->
 
 
     {{ template_content }}
 
     <!-- Footer Start -->
-{{ partial:layout.frontend_layout.body.footer }}
+{{ partial:partials/footer }}
     <!-- Footer End -->
 
 
@@ -35,10 +31,11 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Footer Start -->
-    {{ partial:layout.frontend_layout.body.script }}
-    <!-- Footer End -->
+    <!-- Script Start -->
+    {{ partial:partials/script }}
+
+    <!-- Script End -->
+
 </body>
 
-</html>
 

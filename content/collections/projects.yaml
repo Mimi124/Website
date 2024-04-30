@@ -1,4 +1,10 @@
 title: Projects
+<<<<<<< HEAD
+revisions: false
+date_behavior:
+  past: public
+  future: private
+=======
 template: default
 layout: layout
 taxonomies:
@@ -14,3 +20,4 @@ preview_targets:
     label: Entry
     url: '{permalink}'
     refresh: true
+>>>>>>> 2e99b1ce1d3182e802df262505ced58fa427bede

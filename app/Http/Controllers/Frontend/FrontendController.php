@@ -11,7 +11,6 @@ use App\Models\Facts;
 use App\Models\Features;
 use App\Models\Gallery;
 use App\Models\OurGoal;
-use App\Models\SectionTitle;
 use App\Models\Slider;
 use App\Models\Teams;
 use App\Models\Testimonial;
@@ -73,14 +72,14 @@ class FrontendController extends Controller
 
     }
 
-    function Contact() {
 
+
+    function Contact() {
         return (new StatamicView)->layout('layout')->template('frontend_pages.Contact.contact');
     }
 
     function Blog() {
 
-        $blogs = Blog::get();
 
 
 
@@ -90,7 +89,6 @@ class FrontendController extends Controller
         //             ->orWhere('description', 'like', '%'.$request->search.'%');
         //     });
         // }
-        Blog::latest()->paginate(10);
 
 
         return (new StatamicView)->layout('layout')->template('frontend_pages.Blog.blog');

@@ -2,7 +2,11 @@ title: Features
 template: default
 layout: layout
 revisions: false
+<<<<<<< HEAD
+title_format: title
+=======
 title_format: Title
+>>>>>>> 2e99b1ce1d3182e802df262505ced58fa427bede
 sort_dir: asc
 date_behavior:
   past: public
