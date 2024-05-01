@@ -2,21 +2,20 @@
     <div class="row gx-0 d-none d-lg-flex">
         <div class="col-lg-7 px-5 text-start">
             <div class="h-100 d-inline-flex align-items-center me-4">
-                <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-light"></i></a>Starlets 91 Road, Ministries  </small>
+                <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-light"></i></a>{{ contacts:address }} &nbsp; {{ contacts:postal_address }} </small>
             </div>
 
 
             <div class="h-100 d-inline-flex align-items-center">
-               <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-light"></i></a>mswr@mswr.com</small>
+               <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-light"></i></a>{{ contacts:email }}</small>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center mx-n2">
                 <span>Follow Us:</span>
-                <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                {{ collection:social_media }}
+                <a class="btn btn-link text-light" href="{{link }}"><i class="{{ icon }}"></i></a>
+               {{ /collection:social_media  }}
             </div>
         </div>
     </div>

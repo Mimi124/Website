@@ -6,17 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Agencies;
 use App\Models\Blog;
-use App\Models\BlogCategory;
 use App\Models\Facts;
 use App\Models\Features;
-use App\Models\Gallery;
 use App\Models\OurGoal;
 use App\Models\Slider;
 use App\Models\Teams;
 use App\Models\Testimonial;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 use Statamic\View\View as StatamicView;
 
 class FrontendController extends Controller
