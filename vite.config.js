@@ -19,6 +19,7 @@ export default defineConfig({
                 'resources/css/style.css',
                 'resources/css/themify-icons.css',
                 'resources/css/main.css',
+                
                 ////////////////JS////////////////////
                 'resources/lib/wow/wow.min.js',
                 'resources/lib/easing/easing.min.js',
