@@ -20,6 +20,7 @@ tabs:
               always_save: true
               validate:
                 - required
+              width: 50
           -
             handle: email
             field:
@@ -38,6 +39,7 @@ tabs:
               validate:
                 - required
                 - email
+              width: 50
           -
             handle: subject
             field:

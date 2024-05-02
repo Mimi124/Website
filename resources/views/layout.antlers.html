@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site:short_locale }}">
 
 <head>
+    {{# Css #}}
     {{ partial:partials/css }}
+    {{# Css #}}
+
 </head>
 
 
@@ -15,9 +18,9 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    {{ partial:partials/topbar }}
-    <!-- Topbar End -->
+    <!-- Header Start -->
+    {{ partial:partials/header }}
+    <!-- Header End -->
 
 
     <!-- Navbar Start -->
@@ -26,7 +29,7 @@
 
 
     {{ template_content }}
-    
+
     <!-- Footer Start -->
     {{ partial:partials/footer }}
     <!-- Footer End -->
@@ -43,3 +46,5 @@
     <!-- Script End -->
 
 </body>
+
+</html>

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\About;
 use App\Models\Agencies;
 use App\Models\Blog;
 use App\Models\Facts;

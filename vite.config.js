@@ -6,7 +6,6 @@ export default defineConfig({
         laravel({
             input: [
                 // 'resources/img/favicon.ico',
-
                 'resources/lib/animate/animate.min.css',
                 'resources/lib/owlcarousel/assets/owl.carousel.min.css',
                 'resources/lib/lightbox/css/lightbox.min.css',
@@ -19,7 +18,7 @@ export default defineConfig({
                 'resources/css/style.css',
                 'resources/css/themify-icons.css',
                 'resources/css/main.css',
-                
+
                 ////////////////JS////////////////////
                 'resources/lib/wow/wow.min.js',
                 'resources/lib/easing/easing.min.js',
@@ -47,8 +46,8 @@ export default defineConfig({
 
 
 
-                // 'resources/css/app.css',
-                // 'resources/js/app.js',
+                'resources/css/app.css',
+                //  'resources/js/app.js',
             ],
             refresh: true,
         }),
