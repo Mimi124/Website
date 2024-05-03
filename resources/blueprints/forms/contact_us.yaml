@@ -12,34 +12,31 @@ tabs:
               antlers: false
               type: text
               display: Name
+              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              always_save: true
               validate:
                 - required
-              width: 50
           -
             handle: email
             field:
               input_type: email
               placeholder: 'Your Email'
-              autocomplete: email
               antlers: false
               type: text
               display: Email
+              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              always_save: true
               validate:
                 - required
                 - email
-              width: 50
           -
             handle: subject
             field:
@@ -58,6 +55,7 @@ tabs:
           -
             handle: message
             field:
+              placeholder: Message
               antlers: false
               type: textarea
               display: Message
@@ -68,4 +66,3 @@ tabs:
               hide_display: false
               validate:
                 - required
-              placeholder: 'Leave a message here'

@@ -1,6 +1,7 @@
+<div class="form-floating">
 <input
     type="{{ input_type ?? 'text' }}"
-    class="form-control"
+    class="form-control {{ if error}} is-invalid {{ /if }} }}"
     name="{{ handle }}"
     value="{{ value }}"
     {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
@@ -9,3 +10,10 @@
     {{ if js_driver }}{{ js_attributes }}{{ /if }}
     {{ if validate|contains:required }}required{{ /if }}
 >
+    <label for="{{ handle }}">{{ placeholder }}</label>
+    {{ if error }}
+    <div class="invalid-feedback">
+        {{ error }}
+    </div>
+    {{ /if }}
+</div>

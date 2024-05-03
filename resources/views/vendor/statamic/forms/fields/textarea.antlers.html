@@ -1,11 +1,14 @@
+<div class="form-floating">
 <textarea
     name="{{ handle }}"
-    class=form-control
+    class="form-control {{ if error}} is-invalid {{ /if }}"
     style="height: 200px"
     {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
     {{ if character_limit }}maxlength="{{ character_limit }}"{{ /if }}
     {{ if js_driver }}{{ js_attributes }}{{ /if }}
     {{ if validate|contains:required }}required{{ /if }}
->
-    {{ value }}
+>{{ value }}
 </textarea>
+<label for="{{ handle }}">{{ placeholder }}</label>
+
+</div>
