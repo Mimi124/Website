@@ -73,6 +73,14 @@ class FrontendController extends Controller
         return (new StatamicView)->layout('layout')->template('frontend_pages.Contact.contact');
     }
 
+    function Project() {
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Projects.projects');
+    }
+
+    function projectDetails() {
+        return (new StatamicView)->layout('layout')->template('frontend_pages.Projects.project-details');
+    }
+
     function Blog() {
 
 

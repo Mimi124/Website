@@ -17,7 +17,10 @@ export default defineConfig({
                 'resources/css/slick.css',
                 'resources/css/style.css',
                 'resources/css/themify-icons.css',
-                'resources/css/main.css',
+                // 'resources/css/main.css',
+                'resources/js/vendor/swiper/swiper-bundle.min.css',
+                'resources/js/vendor/glightbox/css/glightbox.min.css',
+                'resources/js/vendor/aos/aos.css',
 
                 ////////////////JS////////////////////
                 'resources/lib/wow/wow.min.js',
@@ -27,11 +30,11 @@ export default defineConfig({
                 'resources/lib/counterup/counterup.min.js',
                 'resources/lib/parallax/parallax.min.js',
                 'resources/lib/isotope/isotope.pkgd.min.js',
-                'resources/lib/lightbox/js/lightbox.min.js',
+                // 'resources/lib/lightbox/js/lightbox.min.js',
 
 
                 // 'resources/js/popper.min.js',
-                'resources/js/gijgo.min.js',
+                // 'resources/js/gijgo.min.js',
                 'resources/js/animated.headline.js',
                 'resources/js/jquery.magnific-popup.js',
                 'resources/js/jquery.slicknav.min.js',
@@ -40,6 +43,12 @@ export default defineConfig({
                 'resources/js/jquery.sticky.js',
                 'resources/js/plugins.js',
                 'resources/js/main.js',
+                // 'resources/js/popper.min.js',
+
+                'resources/js/vendor/aos/aos.js',
+                'resources/js/vendor/glightbox/js/glightbox.min.js',
+                // 'resources/vendor/isotope-layout/isotope.pkgd.min.js',
+                'resources/js/vendor/swiper/swiper-bundle.min.js',
 
 
 

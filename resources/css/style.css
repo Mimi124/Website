@@ -199,7 +199,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../img/hero6.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -1539,7 +1539,7 @@ h6,
 /* line 37, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_h1-hero.scss */
 .slider-area {
   margin-top: -1px;
-  background-image: url(../img/hero/h1_hero.png);
+  /* background-image: url(../img/hero/h1_hero.png); */
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -4980,283 +4980,7 @@ h6,
   background-color: #140C40;
 }
 
-/* line 1, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.breadcam_bg {
-  background-image: url(../img/banner/bradcam.png);
-}
 
-/* line 4, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.breadcam_bg_1 {
-  background-image: url(../img/banner/bradcam2.png);
-}
-
-/* line 7, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.breadcam_bg_2 {
-  background-image: url(../img/banner/bradcam3.png);
-}
-
-/* line 10, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.bradcam_area {
-  background-size: cover;
-  background-position: center center;
-  padding: 160px 0;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 767px) {
-  /* line 10, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .bradcam_area {
-    padding: 150px 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 10, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .bradcam_area {
-    padding: 150px 0;
-  }
-}
-
-/* line 22, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.bradcam_area h3 {
-  font-size: 50px;
-  color: #fff;
-  font-weight: 900;
-  margin-bottom: 0;
-  font-family: "Muli", sans-serif;
-  text-transform: capitalize;
-}
-
-@media (max-width: 767px) {
-  /* line 22, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .bradcam_area h3 {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 22, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .bradcam_area h3 {
-    font-size: 40px;
-  }
-}
-
-/* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box {
-  background: #fff;
-  display: inline-block;
-  z-index: 9;
-  width: 681px;
-  padding: 60px 40px;
-}
-
-@media (max-width: 767px) {
-  /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .popup_box {
-    width: 320px;
-    padding: 45px 30px;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 38, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .popup_box {
-    width: 420px !important;
-    padding: 45px 30px;
-  }
-}
-
-/* line 57, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box h3 {
-  text-align: center;
-  font-size: 22px;
-  color: #1F1F1F;
-  margin-bottom: 46px;
-}
-
-/* line 63, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box .boxed-btn3 {
-  width: 100%;
-  text-transform: capitalize;
-}
-
-/* line 67, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box .nice-select {
-  -webkit-tap-highlight-color: transparent;
-  background-color: #fff;
-  /* border-radius: 5px; */
-  border: solid 1px #E2E2E2;
-  box-sizing: border-box;
-  clear: both;
-  cursor: pointer;
-  display: block;
-  float: left;
-  font-family: "Muli", sans-serif;
-  font-weight: normal;
-  width: 100% !important;
-  /* height: 42px; */
-  line-height: 50px;
-  outline: none;
-  padding-left: 18px;
-  padding-right: 30px;
-  position: relative;
-  text-align: left !important;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  width: auto;
-  border-radius: 0;
-  margin-bottom: 30px;
-  height: 50px !important;
-  font-size: 16px;
-  font-weight: 400;
-  color: #919191;
-}
-
-/* line 101, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box .nice-select::after {
-  content: "\f0d7";
-  display: block;
-  height: 5px;
-  margin-top: -5px;
-  pointer-events: none;
-  position: absolute;
-  right: 17px;
-  top: 3px;
-  transition: all 0.15s ease-in-out;
-  width: 5px;
-  font-family: fontawesome;
-  color: #919191;
-  font-size: 15px;
-}
-
-/* line 116, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box .nice-select.open .list {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: scale(1) translateY(0);
-  -ms-transform: scale(1) translateY(0);
-  transform: scale(1) translateY(0);
-  height: 200px;
-  overflow-y: scroll;
-}
-
-/* line 125, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.popup_box .nice-select.list {
-  height: 200px;
-  overflow-y: scroll;
-}
-
-/* line 131, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-#test-form {
-  display: inline-block;
-  margin: auto;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-@media (max-width: 767px) {
-  /* line 131, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  #test-form {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-}
-
-/* line 146, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-#test-form .mfp-close-btn-in .mfp-close {
-  color: #333;
-  display: none !important;
-}
-
-/* line 151, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-#test-form button.mfp-close {
-  display: none !important;
-}
-
-@media (max-width: 767px) {
-  /* line 151, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  #test-form button.mfp-close {
-    display: block !important;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-
-/* line 162, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-#test-form button.mfp-close {
-  overflow: visible;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-  display: block;
-  outline: none;
-  padding: 0;
-  z-index: 1046;
-  box-shadow: none;
-  touch-action: manipulation;
-  width: 40px;
-  height: 40px;
-  background: #4A3600;
-  text-align: center;
-  line-height: 20px;
-  position: absolute;
-  right: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  position: absolute;
-  right: -6px;
-  color: #fff !important;
-}
-
-/* line 189, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-.mfp-bg {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1042;
-  overflow: hidden;
-  position: fixed;
-  background: #4A3600;
-  opacity: 0.6;
-}
-
-@media (max-width: 767px) {
-  /* line 208, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .gj-picker.gj-picker-md.timepicker {
-    width: 310px;
-    left: 6px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  /* line 215, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_bradcam.scss */
-  .gj-picker.gj-picker-md.datepicker.gj-unselectable {
-    width: 320px;
-    left: 0 !important;
-  }
-}
 
 /* line 1, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_extend.scss */
 .flex-center-start {
@@ -6168,381 +5892,119 @@ del {
   border: 1px solid #f1f1f1;
 }
 
-/* line 766, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
-  border: none;
-}
 
-/* line 774, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
 
-/* line 781, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio .portfolio-flters {
+    padding: 0;
+    margin: 0 auto 30px auto;
+    list-style: none;
+    text-align: center;
+  }
 
-/* line 790, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
+  .portfolio .portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 10px;
+    line-height: 1;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
 
-/* line 803, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
-  border: none;
-}
+  .portfolio .portfolio-flters li:hover,
+  .portfolio .portfolio-flters li.filter-active {
+    color: var(--color-primary);
+  }
 
-/* line 811, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
+  .portfolio .portfolio-flters li:first-child {
+    margin-left: 0;
+  }
 
-/* line 818, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+  .portfolio .portfolio-flters li:last-child {
+    margin-right: 0;
+  }
 
-/* line 827, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
+  @media (max-width: 575px) {
+    .portfolio .portfolio-flters li {
+      font-size: 14px;
+      margin: 0 5px;
+    }
+  }
 
-/* line 839, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-checkbox input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
+  .portfolio .portfolio-item {
+    position: relative;
+    border: 1px solid var(--color-white);
+    overflow: hidden;
+    z-index: 1;
+  }
 
-/* line 844, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
-  border: none;
-}
+  .portfolio .portfolio-item img {
+    transition: all 0.3s;
+  }
 
-/* line 852, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.primary-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
+  .portfolio .portfolio-item:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: rgba(var(--color-secondary-rgb), 0.8);
+    z-index: 2;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
 
-/* line 859, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.primary-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+  .portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    inset: auto 40px 40px 40px;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    padding: 20px;
+  }
 
-/* line 868, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.primary-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-white);
+    padding-right: 50px;
+  }
 
-/* line 881, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
-  border: none;
-}
+  .portfolio .portfolio-item .portfolio-info .preview-link,
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 14px);
+    color: rgba(var(--color-white-rgb), 0.7);
+    transition: 0.3s;
+    line-height: 0;
+  }
 
-/* line 889, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
+  .portfolio .portfolio-item .portfolio-info .preview-link:hover,
+  .portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: var(--color-white);
+  }
 
-/* line 896, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 14px;
+    font-size: 28px;
+  }
 
-/* line 905, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
+  .portfolio .portfolio-item:hover:before {
+    visibility: visible;
+    opacity: 1;
+  }
 
-/* line 918, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
-  border: none;
-}
+  .portfolio .portfolio-item:hover img {
+    transform: scale(1.2);
+  }
 
-/* line 926, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 933, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 942, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 954, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-radio input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-/* line 959, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 967, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select {
-  height: 40px;
-}
-
-/* line 969, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select {
-  border: none;
-  border-radius: 0px;
-  height: 40px;
-  background: #f9f9ff;
-  padding-left: 20px;
-  padding-right: 40px;
-}
-
-/* line 976, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select .list {
-  margin-top: 0;
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  width: 100%;
-  padding: 10px 0 10px 0px;
-}
-
-/* line 983, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select .list .option {
-  font-weight: 300;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  line-height: 28px;
-  min-height: 28px;
-  font-size: 12px;
-  padding-left: 20px;
-}
-
-/* line 990, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select .list .option.selected {
-  color: #140C40;
-  background: transparent;
-}
-
-/* line 994, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select .list .option:hover {
-  color: #140C40;
-  background: transparent;
-}
-
-/* line 1001, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .current {
-  margin-right: 50px;
-  font-weight: 300;
-}
-
-/* line 1005, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.default-select .nice-select::after {
-  right: 20px;
-}
-
-/* line 1010, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select {
-  height: 40px;
-  width: 100%;
-}
-
-/* line 1013, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select {
-  border: none;
-  border-radius: 0px;
-  height: 40px;
-  background: #f9f9ff;
-  padding-left: 45px;
-  padding-right: 40px;
-  width: 100%;
-}
-
-/* line 1021, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select .list {
-  margin-top: 0;
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  width: 100%;
-  padding: 10px 0 10px 0px;
-}
-
-/* line 1028, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select .list .option {
-  font-weight: 300;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  line-height: 28px;
-  min-height: 28px;
-  font-size: 12px;
-  padding-left: 45px;
-}
-
-/* line 1035, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select .list .option.selected {
-  color: #140C40;
-  background: transparent;
-}
-
-/* line 1039, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select .list .option:hover {
-  color: #140C40;
-  background: transparent;
-}
-
-/* line 1046, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .current {
-  margin-right: 50px;
-  font-weight: 300;
-}
-
-/* line 1050, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.form-select .nice-select::after {
-  right: 20px;
-}
-
-/* line 1054, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.mt-10 {
-  margin-top: 10px;
-}
-
-/* line 1057, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.section-top-border {
-  padding: 50px 0;
-  border-top: 1px dotted #eee;
-}
-
-/* line 1061, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-/* line 1064, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.mt-30 {
-  margin-top: 30px;
-}
-
-/* line 1067, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
-.switch-wrap {
-  margin-bottom: 10px;
-}
-
+  .portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    inset: auto 10px 0 10px;
+  }

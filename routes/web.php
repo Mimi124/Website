@@ -32,6 +32,10 @@ Route::get('/video', [FrontendController::class, 'Video'])->name('video');
 Route::get('/blog', [FrontendController::class,'Blog'])->name('blog');
 Route::get('/blog-details/{slug}', [FrontendController::class,'blogDetails'])->name('blog.details');
 
+//Frontend Blogs Route
+Route::get('/project', [FrontendController::class,'Project'])->name('project');
+Route::get('/project-details/{slug}', [FrontendController::class,'projectDetails'])->name('project.details');
+
 // Route::statamic('search');
 
 
