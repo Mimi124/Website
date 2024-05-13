@@ -15,14 +15,10 @@
     <!-- Projects Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            {{ collection:projects paginate="2" as="projects"}}
 
-            {{ if no_results }}
-            <p>No Blog Post Found.</p>
-           {{ /if }}
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                  <h2 class="text-success">Our Projects</h2>
-                <h5 class="display-7 mb-5">Some Of Our Wonderful Projects</h5>
+                  <h1 class="text-success">Our Projects</h1>
+                <h4 class="display-7 mb-5">Some Of Our Wonderful Projects</h4>
             </div>
             <div class="row wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-12 text-center">
@@ -30,12 +26,18 @@
                         <li class="mx-2 active" data-filter="*">All</li>
                         <li class="mx-2" data-filter=".first">Ongoing Projects</li>
                         <li class="mx-2" data-filter=".second">Completed Projects</li>
-                        <li class="mx-2" data-filter=".third">Sanitary Projects</li>
+                        <li class="mx-2" data-filter=".third">Sanitation Projects</li>
                         <li class="mx-2" data-filter=".fourth">Water Resources Projects</li>
                     </ul>
                 </div>
             </div>
             <div class="row g-4 portfolio-container">
+                {{ collection:projects paginate="2" as="projects"}}
+
+                {{ if no_results }}
+                <p>No Project  Found.</p>
+               {{ /if }}
+
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner rounded">
                         <img class="img-fluid" src="{{ image:url }}" alt="">
