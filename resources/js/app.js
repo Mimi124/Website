@@ -1,12 +1,15 @@
 // import '../css/app.css';
 
-import * as Popper from "@popperjs/core"
-window.Popper = Popper;
-
 import 'bootstrap';
 
-var Isotope = require('isotope-layout');
-
+import './../assets/lib/easing/easing.min';
+import './../assets/lib/waypoints/waypoints.min';
+import './../assets/lib/owlcarousel/owl.carousel.min';
+import './../assets/lib/counterup/counterup.min';
+import './../assets/lib/parallax/parallax.min';
+import './../assets/lib/isotope/isotope.pkgd.min';
+import './../assets/lib/lightbox/js/lightbox.min';
+import './../assets/js/main';
 
 
 // import Alpine from 'alpinejs';

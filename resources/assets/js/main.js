@@ -3,6 +3,7 @@
 
     // Spinner
     var spinner = function () {
+        console.log('running spinner code')
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
