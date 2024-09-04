@@ -19,30 +19,19 @@ class FrontendController extends Controller
 
 
     function index()  {
-      $sliders = Slider::where('status', 1)->get();
-        // dd($sliders);
-        $features = Features::where('status', 1)->get();
-        $goals = OurGoal::get();
-        $teams = Teams::get();
-        $facts = Facts::get();
-        $blogs = Blog::latest()->take(2)->get();
-        $testimonials = Testimonial::get();
-        $agency = Agencies::get();
+    //   $sliders = Slider::where('status', 1)->get();
+    //     // dd($sliders);
+    //     $features = Features::where('status', 1)->get();
+    //     $goals = OurGoal::get();
+    //     $teams = Teams::get();
+    //     $facts = Facts::get();
+    //     $blogs = Blog::latest()->take(2)->get();
+    //     $testimonials = Testimonial::get();
+    //     $agency = Agencies::get();
 
-        return (new StatamicView)->layout('layout')->template('home')->with(
-        compact(
-            'sliders',
-            'features',
-            'goals',
-            'teams',
-            'facts',
-            'blogs',
-            'testimonials',
-            'agency',
-    ));
-
+        return (new StatamicView)->layout('layout')->template('home');
     }
-
+    
     function about()  {
 
     //   $facts = Facts::get();

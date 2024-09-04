@@ -12,8 +12,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "mitydigital/statamic-google-fonts": "^1.0",
-        "statamic/cms": "^4.36",
+        "mitydigital/statamic-google-fonts": "^2.0.0",
+        "statamic/cms": "^5.24.0",
         "stillat/antlers-layouts": "^2.0",
         "stoffelio/statamic-404-logger": "^1.0",
         "webographen/statamic-admin-log": "^1.0"
@@ -21,7 +21,6 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
         "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
