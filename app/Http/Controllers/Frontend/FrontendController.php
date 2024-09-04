@@ -3,14 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Agencies;
 use App\Models\Blog;
-use App\Models\Facts;
-use App\Models\Features;
-use App\Models\OurGoal;
-use App\Models\Slider;
-use App\Models\Teams;
-use App\Models\Testimonial;
 use Illuminate\Contracts\View\View;
 use Statamic\View\View as StatamicView;
 
@@ -19,23 +12,11 @@ class FrontendController extends Controller
 
 
     function index()  {
-    //   $sliders = Slider::where('status', 1)->get();
-    //     // dd($sliders);
-    //     $features = Features::where('status', 1)->get();
-    //     $goals = OurGoal::get();
-    //     $teams = Teams::get();
-    //     $facts = Facts::get();
-    //     $blogs = Blog::latest()->take(2)->get();
-    //     $testimonials = Testimonial::get();
-    //     $agency = Agencies::get();
 
         return (new StatamicView)->layout('layout')->template('home');
     }
-    
-    function about()  {
 
-    //   $facts = Facts::get();
-    //     $teams = Teams::where('status', 1)->get();
+    function about()  {
 
      return (new StatamicView)->layout('layout')->template('frontend_pages.About.about');
 
